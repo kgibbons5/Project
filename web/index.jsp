@@ -18,7 +18,7 @@
     <form id="loginform" action="login.jsp" method="post">
     <table>
         <tr><td>ID:</td><td><input type="text" id = "id" name="id" /></td></tr>
-        <tr><td>Password</td><td><input type="text" id = "password" name="password" /></td></tr>
+        <tr><td>Password</td><td><input type="Password" id = "password" name="password" /></td></tr>
             
     </table>
     <input type="submit" id="submit" value="Login" /> <%-- Login?--%>
