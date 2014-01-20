@@ -26,7 +26,7 @@
         <tr><td>FirstName</td><td><input type="text" id = "firstName" name="firstName" /></td></tr>
         <tr><td>SurName</td><td><input type="text" id = "surName" name="surName" /></td></tr>
         <tr><td>Email</td><td><input type="text" id = "email" name="email" /></td></tr>
-        <tr><td>Password</td><td><input type="text" id = "password" name="password" /></td></tr>
+        <tr><td>Password</td><td><input type=Password id = "password" name="password" /></td></tr>
         
     </table>
     <input type="submit" id="Register" value="Register" />
