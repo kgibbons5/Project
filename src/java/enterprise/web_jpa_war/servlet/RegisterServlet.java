@@ -64,7 +64,7 @@ public class RegisterServlet extends HttpServlet {
             if(errorMsg != null){
                 RequestDispatcher rd = getServletContext().getRequestDispatcher("/register.jsp");
                 PrintWriter out= response.getWriter();
-                out.println("<font color=red>"+errorMsg+"</font>");
+                out.println("<center><font color=red>"+errorMsg+"</font></center>");
                 rd.include(request, response);
             }
             else

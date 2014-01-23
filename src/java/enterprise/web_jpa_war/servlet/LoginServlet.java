@@ -8,6 +8,7 @@ package enterprise.web_jpa_war.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Katie
  */
-@WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
+@WebServlet(name = "LoginServlet", urlPatterns = {"/Login"})
 public class LoginServlet extends HttpServlet {
 
     /**
@@ -36,15 +37,21 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            String inputId         = (String) request.getParameter("id");
+            String inputPassword   = (String) request.getParameter("password");
+            
+            if((inputId == null || inputId.equals("")||(inputPassword == null || inputPassword.equals(""))))
+            {
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/logFail.jsp");
+                rd.include(request, response);
+            }
+            else 
+            {    
+                 RequestDispatcher pd = getServletContext().getRequestDispatcher("/logSuccess.jsp");
+                 pd.include(request, response);
+                        
+            }
+            
         } finally {
             out.close();
         }
