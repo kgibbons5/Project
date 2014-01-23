@@ -21,7 +21,7 @@
 <img src="http://www.animatedgif.net/welcome/greetz_e0.gif" alt="welcome" height="35%" width="35%">     
 <h1> Login Below </h1>
     
-<form id="loginform" action="login.jsp" method="post">
+<form id="loginform" action="Login" method="post">
     
 <table>
         
