@@ -44,40 +44,41 @@ public class LoginServlet extends HttpServlet {
        
         
         try {
-            /* TODO output your page here. You may use following sample code. */
-         Class.forName("com.mysql.jdbc.Driver");
-        Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://danu6.it.nuigalway.ie/mydb1253","mydb1253gk","lu9syq");
-        
-        String sql="Select * from Customer";
-        Statement stmt=con.createStatement();
-        ResultSet rs = stmt.executeQuery(sql);
-        
+            
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://danu6.it.nuigalway.ie/mydb1253","mydb1253gk","lu9syq");
+
+            String sql="Select * from Customer";
+            Statement stmt=con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+
             String inputId         = (String) request.getParameter("id");
             String inputPassword   = (String) request.getParameter("password");
-                int tmp=0;
+            int tmp=0;
+            
             while(rs.next()) 
             {
-            String uname=rs.getString("cID");
-//Username is the coloumn name in the database table 
-            String pass=rs.getString("password");
-            if ((inputId.equals(uname)) && (inputPassword.equals(pass))) 
-            {
-                RequestDispatcher pd = getServletContext().getRequestDispatcher("/logSuccess.jsp");
-                 pd.include(request, response);
-                   tmp++;
+                String uname = rs.getString("cID");
+                //Username is the coloumn name in the database table 
+                String pass = rs.getString("password");
+                if ((inputId.equals(uname)) && (inputPassword.equals(pass))) 
+                {
+                    RequestDispatcher pd = getServletContext().getRequestDispatcher("/logSuccess.jsp");
+                    pd.include(request, response);
+                    tmp++;
                 }
             }
             if (tmp==0) 
             {
-             RequestDispatcher rd = getServletContext().getRequestDispatcher("/logFail.jsp");
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/logFail.jsp");
                 rd.include(request, response);
-               }
-            
+            }
+          
         } catch (Exception e){}
         
-finally {
-            out.close();
-        }
+        finally {
+                    out.close();
+                }
         
     }
 
