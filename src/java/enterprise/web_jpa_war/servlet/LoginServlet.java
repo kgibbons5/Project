@@ -44,17 +44,16 @@ public class LoginServlet extends HttpServlet {
        
         
         try {
-            
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://danu6.it.nuigalway.ie/mydb1253","mydb1253gk","lu9syq");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://danu6.it.nuigalway.ie/mydb1253","mydb1253gk","lu9syq");
 
-            String sql="Select * from Customer";
-            Statement stmt=con.createStatement();
+            String sql = "Select * from Customer";
+            Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
             String inputId         = (String) request.getParameter("id");
             String inputPassword   = (String) request.getParameter("password");
-            int tmp=0;
+            int tmp = 0;
             
             while(rs.next()) 
             {
