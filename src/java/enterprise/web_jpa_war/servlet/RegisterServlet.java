@@ -51,14 +51,14 @@ public class RegisterServlet extends HttpServlet {
             if(firstName == null || firstName.equals("")){
                 errorMsg = "FirstName can't be null or empty";
             }
-                 if(surName == null || surName.equals("")){
+            if(surName == null || surName.equals("")){
                 errorMsg ="SurName Email can't be null or empty";
             }
             if(email == null || email.equals("")){
                 errorMsg = "Email can't be null or empty";
             }
-              if(email == null || email.equals("")){
-                password = "Password can't be null or empty";
+            if(password == null || password.equals("")){
+                errorMsg = "Password can't be null or empty";
             }
 
             if(errorMsg != null){
