@@ -53,6 +53,7 @@ public class LoginServlet extends HttpServlet {
 
             String inputId         = (String) request.getParameter("id");
             String inputPassword   = (String) request.getParameter("password");
+            String errorMsg = null;
             int tmp = 0;
             
             while(rs.next()) 
@@ -66,13 +67,50 @@ public class LoginServlet extends HttpServlet {
                     pd.include(request, response);
                     tmp++;
                 }
+                else if(inputId.equals(uname))
+                {
+                     RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
+                     pd.include(request, response);
+                     errorMsg ="Wrong password given with Username, Try Again!";
+                     out.println("<center><font color=red><font size=6>"+errorMsg+"</font></center>");
+                     tmp++;
+                } 
+                else if(inputPassword.equals(pass))
+                {
+                     RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
+                     pd.include(request, response);
+                     errorMsg ="Wrong Username given with Password, Try Again!";
+                     out.println("<center><font color=red><font size=6>"+errorMsg+"</font></center>");
+                     tmp++;
+                } 
+                else
+                {
+                     RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
+                     pd.include(request, response);
+                     errorMsg ="Wrong Username and Password, Try Again!";
+                     out.println("<center><font color=red><font size=6>"+errorMsg+"</font></center>");
+                     tmp++;
+                    
+                }
+            
+                   
             }
             if (tmp==0) 
             {
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/logFail.jsp");
-                rd.include(request, response);
-            }
-          
+                 
+                 RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
+                pd.include(request, response);
+                if(inputId == null || inputId.equals(""))
+                errorMsg ="User ID can't be null or empty!";
+                
+                if(inputPassword == null || inputPassword.equals(""))
+                errorMsg ="Password can't be null or empty!";
+                out.println("<center><font color=red><font size=6>"+errorMsg+"</font></center>");
+                
+                
+                
+            
+              }
         } catch (Exception e){}
         
         finally {

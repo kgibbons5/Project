@@ -33,8 +33,6 @@
 </table>
     
 <input type="submit" id="submit" value="Login" /> <%-- Login?--%>
- 
-<h1> Or </h1>
      
 </form>
 <a href="register.jsp"><strong>Register here!</strong></a> <%--Link to register--%> </body>
