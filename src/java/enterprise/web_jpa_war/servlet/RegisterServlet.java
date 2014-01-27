@@ -35,6 +35,7 @@ public class RegisterServlet extends HttpServlet {
     throws ServletException {
         assert emf != null;  //Make sure injection went through correctly.
         EntityManager em = null;
+       String errormsg1="", errormsg2="", errormsg3="", errormsg4="", errormsg5="";
         try {
             
             //Get the data from user's form
@@ -44,30 +45,71 @@ public class RegisterServlet extends HttpServlet {
             String email      = (String) request.getParameter("email");
             String password   = (String) request.getParameter("password");
             
-            String errorMsg = null;
-            if(id == null || id.equals("")){
-                errorMsg ="User ID can't be null or empty";
+            boolean error = false;
+            
+            if(id == null || id.equals(""))
+            {
+                errormsg1 ="User ID can't be null or empty";
+                error=true;
             }
-            if(firstName == null || firstName.equals("")){
-                errorMsg = "FirstName can't be null or empty";
+            if(firstName == null || firstName.equals(""))
+            {
+                errormsg2 = "FirstName can't be null or empty";
+                error=true;
             }
-            if(surName == null || surName.equals("")){
-                errorMsg ="SurName Email can't be null or empty";
+            if(surName == null || surName.equals(""))
+            {
+                errormsg3 ="SurName Email can't be null or empty";
+                error=true;
             }
-            if(email == null || email.equals("")){
-                errorMsg = "Email can't be null or empty";
+            if(email == null || email.equals(""))
+            {
+                errormsg4 = "Email can't be null or empty";
+                error=true;
             }
-            if(password == null || password.equals("")){
-                errorMsg = "Password can't be null or empty";
+            if(password == null || password.equals(""))
+            {
+                errormsg5 = "Password can't be null or empty";
+                error=true;
             }
-
-            if(errorMsg != null){
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/register.jsp");
+            
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/regFail.jsp");
                 PrintWriter out= response.getWriter();
-                out.println("<center><font color=red>"+errorMsg+"</font></center>");
-                rd.include(request, response);
+                
+            if(error)
+            {
+                out.println("<center><img src=\"http://blog.extreme-advice.com/wp-content/uploads/2013/01/error.png\" alt=\"error\" height=\"40%\" width=\"20%\">");
+                out.println("<center><font size = \"4\" color=\"#151B54\"><h2>Registration Failed!</h2>");
             }
-            else
+                
+            if(errormsg1 != "")
+            {
+                out.println("<center><p><font color=red>"+errormsg1+"</font><p></center>");
+            }
+            if(errormsg2 != "")
+            {
+                out.println("<center><p><font color=red>"+errormsg2+"</font></p></center>");
+            }
+            if(errormsg3 != "")
+            {
+                out.println("<center><p><font color=red>"+errormsg3+"</font></p></center>");
+            }
+            if(errormsg4 != "")
+            {
+                out.println("<center><p><font color=red>"+errormsg4+"</font></p></center>");
+            }
+            if(errormsg5 != "")
+            {
+                out.println("<center><p><font color=red>"+errormsg5+"</font></p></center>");
+            }
+            if(error)
+            {
+            out.println("<center><a href=\"register.jsp\"><strong><h3>Click Here to Try Again!</h3></strong></a>");
+            }
+            
+            rd.include(request, response);
+            
+            if((errormsg1 == "")&&(errormsg2 == "")&&(errormsg3 == "")&&(errormsg4 == "")&&(errormsg5 == ""))
             {
                 //Create a person instance out of it
                 Customer customer = new Customer(id, firstName, surName, email,password);

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package enterprise.web_jpa_war.servlet;
 
 import enterprise.web_jpa_war.entity.Customer;
@@ -63,8 +57,9 @@ public class LoginServlet extends HttpServlet {
                 String pass = rs.getString("password");
                 if ((inputId.equals(uname)) && (inputPassword.equals(pass))) 
                 {
-                    RequestDispatcher pd = getServletContext().getRequestDispatcher("/logSuccess.jsp");
-                    pd.include(request, response);
+                    request.getRequestDispatcher("logSuccess.jsp").forward(request, response);
+                    /*RequestDispatcher pd = getServletContext().getRequestDispatcher("/logSuccess.jsp");
+                    pd.include(request, response);*/
                     tmp++;
                 }
                 else if(inputId.equals(uname))
@@ -72,7 +67,7 @@ public class LoginServlet extends HttpServlet {
                      RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
                      pd.include(request, response);
                      errorMsg ="Wrong password given with Username, Try Again!";
-                     out.println("<center><font color=red><font size=6>"+errorMsg+"</font></center>");
+                     out.println("<center><font color=red size=5>"+errorMsg+"</font></center>");
                      tmp++;
                 } 
                 else if(inputPassword.equals(pass))
@@ -80,7 +75,7 @@ public class LoginServlet extends HttpServlet {
                      RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
                      pd.include(request, response);
                      errorMsg ="Wrong Username given with Password, Try Again!";
-                     out.println("<center><font color=red><font size=6>"+errorMsg+"</font></center>");
+                     out.println("<center><font color=red size=5>"+errorMsg+"</font></center>");
                      tmp++;
                 } 
                 else
@@ -88,7 +83,7 @@ public class LoginServlet extends HttpServlet {
                      RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
                      pd.include(request, response);
                      errorMsg ="Wrong Username and Password, Try Again!";
-                     out.println("<center><font color=red><font size=6>"+errorMsg+"</font></center>");
+                     out.println("<center><font color=red size=5>"+errorMsg+"</font></center>");
                      tmp++;
                     
                 }
@@ -105,7 +100,7 @@ public class LoginServlet extends HttpServlet {
                 
                 if(inputPassword == null || inputPassword.equals(""))
                 errorMsg ="Password can't be null or empty!";
-                out.println("<center><font color=red><font size=6>"+errorMsg+"</font></center>");
+                out.println("<center><strong><font color=red size=5>"+errorMsg+"</font></strong></center>");
                 
                 
                 
