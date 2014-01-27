@@ -9,11 +9,6 @@
     </head>
     
     <body bgcolor="#B4CFEC">
-        <div class="logo">
-        <left>  
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" alt="logo" height="30%" width="15%">
-        </left> 
-        </div>
     
         <div class="main">
         <center>
