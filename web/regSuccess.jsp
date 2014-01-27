@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 <html>
     
+    <head>
+        <title>Registration Success</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+    </head>
 
-<head>
-<left>  
-<img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" alt="logo" height="20%" width="15%">
-</left> 
-
-<center>     
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <body bgcolor="#B4CFEC">
         
-<title>Registration Success
-</title>
+        <center>
+            <font size = "4" color="#151B54">     
+            <br><br><img src="http://www.clker.com/cliparts/G/F/D/c/j/r/correct-md.png" alt="tick" height="50%" width="25%">
+            <h1>Registration Successful!</h1>
+        
+            <a href="index.jsp"><strong>Click here to login</strong></a> 
+        </center>
     
-</head>
+    </body>
 
-<body bgcolor="#B4CFEC">
-
- 
-<font size = "4" color="#151B54">     
-<img src="http://www.clker.com/cliparts/G/F/D/c/j/r/correct-md.png" alt="tick" height="50%" width="25%">
-<body>
-        
-<h1>Registration Sucessful!</h1>
-        
-        
-<a href="index.jsp"><strong>Click here login</strong></a> 
-    
-</body>
 </html>
-
-</center>
