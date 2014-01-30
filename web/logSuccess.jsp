@@ -18,7 +18,7 @@
   
   <div id="header"><h1>
   <a href="#">
-             <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="25%">
+             <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
              </a>
   <a href="http://www.free-css.com/free-css-layouts.php"><form id="tfnewsearch" method="get" action="http://www.google.com">
        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">

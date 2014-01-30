@@ -49,41 +49,47 @@ public class LoginServlet extends HttpServlet {
             String inputPassword   = (String) request.getParameter("password");
             String errorMsg = null;
             int tmp = 0;
+            boolean found=false;
             
             while(rs.next()) 
             {
                 String uname = rs.getString("cID");
                 //Username is the coloumn name in the database table 
                 String pass = rs.getString("password");
-                if ((inputId.equals(uname)) && (inputPassword.equals(pass))) 
+                if (((inputId.equals(uname)) && (inputPassword.equals(pass))) && (!found)) 
                 {
                     request.getRequestDispatcher("logSuccess.jsp").forward(request, response);
                     /*RequestDispatcher pd = getServletContext().getRequestDispatcher("/logSuccess.jsp");
                     pd.include(request, response);*/
+                    found=true;
                     tmp++;
                 }
-                else if(inputId.equals(uname))
+                else if(inputId.equals(uname) && (!found))
                 {
                      RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
                      pd.include(request, response);
                      errorMsg ="Wrong password given with Username, Try Again!";
                      out.println("<center><font color=red size=5>"+errorMsg+"</font></center>");
+                     found=true;
                      tmp++;
+      
                 } 
-                else if(inputPassword.equals(pass))
+                else if(inputPassword.equals(pass) && (!found))
                 {
                      RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
                      pd.include(request, response);
                      errorMsg ="Wrong Username given with Password, Try Again!";
                      out.println("<center><font color=red size=5>"+errorMsg+"</font></center>");
+                     found=true;
                      tmp++;
                 } 
-                else
+                else if(((!inputId.equals(uname)) && (!inputPassword.equals(pass))) && (!found))
                 {
                      RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
                      pd.include(request, response);
                      errorMsg ="Wrong Username and Password, Try Again!";
                      out.println("<center><font color=red size=5>"+errorMsg+"</font></center>");
+                     found=true;
                      tmp++;
                     
                 }
