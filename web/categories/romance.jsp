@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -74,16 +74,17 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-Sci-Fi Films...<table id="productTable">
+Romance Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="Products/Inception.jpg" alt="image" height="100px" width="70px"/>
+                            <img src="#" alt="Product images\Love Actually.jpg">
                         </td>
                         <td class="lightBlue">
-                        <strong>Inception</strong>
+                            <strong>Love Actually</strong>
                             <br>
-                            <span class="smallText"><p>A skilled extractor is offered a chance to regain 
-                                    his old life as payment for a task considered to be impossible.</p></span>
+                            <span class="smallText"><p>Follows the lives of eight very different couples
+                            in dealing with their love lives in various loosely and interrelated tales all
+                            set during a frantic month before Christmas in London, England.</p></span>
                         </td>
                         <td class="lightBlue">[ price ]</td>
                         <td class="lightBlue">
@@ -92,34 +93,16 @@ Sci-Fi Films...<table id="productTable">
                             </form>
                         </td>
                     </tr>
-                        
+                    
                     <tr>
                         <td class="white">
-                            <img src="Products/E.T.jpg" alt="image" height="100px" width="70px">
+                            <img src="#" alt="Product images\Dear John.jpg">
                         </td>
-                        
                         <td class="white">
-                            <strong>E.T</strong>
+                            <strong>Dear John</strong>
                             <br>
-                            <span class="smallText"><p>A troubled child summons the courage to help a 
-                            friendly alien escape Earth and return to his home-world</p></span>
-                        </td>
-                        <td class="white">[ price ]</td>
-                        <td class="white">
-                            <form action="#" method="post">
-                                <input type="submit" value="purchase button">
-                            </form>
-                        </td>
-                    </tr>
-    
-                     <td class="white">
-                            <img src="Products/Super 8.jpg" alt="image" height=100px" width="70px">
-                        </td>
-                        <td class="white">
-                            <strong>Super 8</strong>
-                            <br>
-                            <span class="smallText"><p>During the summer of 1979, a group of friends witness a train
-                             crash and investigate subsequent unexplained events in their small town.</p></span>
+                            <span class="smallText"><p>A romantic drama about a soldier who falls for
+                             a conservative college student while he's home on leave..</p></span>
                         </td>
                         <td class="white">[ price ]</td>
                         <td class="white">
@@ -130,15 +113,34 @@ Sci-Fi Films...<table id="productTable">
                     </tr>
                     
                     <tr>
+                        <td class="lightBlue">
+                            <img src="#" alt="Product images\titanic.jpg">
+                        </td>
+                        <td class="lightBlue">
+                            <strong>Titanic</strong>
+                            <br>
+                            <span class="smallText"><p>A seventeen-year-old aristocrat, expecting to be married
+                             to a rich claimant by her mother, falls in love with a kind but poor artist aboard
+                             the luxurious, ill-fated R.M.S. Titanic.</p></span>
+                        </td>
+                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue">
+                            <form action="#" method="post">
+                                <input type="submit" value="purchase button">
+                            </form>
+                        </td>
+                    </tr>
+                    
+                    <tr>
                         <td class="white">
-                            <img src="Products/The Matrix.jpg" alt="image" height=100px" width="50px">
+                            <img src="#" alt="Product images//Dirty Dancing.jpg">
                         </td>
                         <td class="white">
-                            <strong>The Matrix</strong>
+                            <strong>Dirty Dancing</strong>
                             <br>
-                            <span class="smallText"><p>A computer hacker learns from mysterious rebels
-                                    about the true nature of his reality and his role in the war against
-                                    its controllers.</p></span>
+                            <span class="smallText"><p>Spending the summer in a holiday camp with her family,
+                            Frances "Baby" Houseman falls in love with the camp's dance instructor 
+                            Johnny Castle.</p></span>
                         </td>
                         <td class="white">[ price ]</td>
                         <td class="white">

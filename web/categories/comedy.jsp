@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -65,7 +65,7 @@
        <li><a href="horror.jsp">Horror</a></li>
        <li><a href="children.jsp">Childrens</a></li>
        <li><a href="thriller.jsp">Thriller</a></li>
-       <li class="last"><a href="categories\romance.jsp">Romance</a></li>
+       <li class="last"><a href="romance.jsp">Romance</a></li>
      </ul>
      <div class="clearthis">&nbsp;</div>
    </div>
@@ -74,16 +74,17 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-Sci-Fi Films...<table id="productTable">
+ Comedy Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="Products/Inception.jpg" alt="image" height="100px" width="70px"/>
+                            <img src="Product images/anchorman.jpg" alt="gjjgjgjgkj">
+                                
+                                
                         </td>
                         <td class="lightBlue">
-                        <strong>Inception</strong>
+                            <strong>Anchorman</strong>
                             <br>
-                            <span class="smallText"><p>A skilled extractor is offered a chance to regain 
-                                    his old life as payment for a task considered to be impossible.</p></span>
+                            <span class="smallText">[ product description ]</span>
                         </td>
                         <td class="lightBlue">[ price ]</td>
                         <td class="lightBlue">
@@ -92,17 +93,15 @@ Sci-Fi Films...<table id="productTable">
                             </form>
                         </td>
                     </tr>
-                        
+
                     <tr>
                         <td class="white">
-                            <img src="Products/E.T.jpg" alt="image" height="100px" width="70px">
+                            <img src="Productimages/TheHangover.jpg" id="logo" alt="logo" height="40%" width="40%">
                         </td>
-                        
                         <td class="white">
-                            <strong>E.T</strong>
+                            <strong>The Hangover</strong>
                             <br>
-                            <span class="smallText"><p>A troubled child summons the courage to help a 
-                            friendly alien escape Earth and return to his home-world</p></span>
+                            <span class="smallText">[ product description ]</span>
                         </td>
                         <td class="white">[ price ]</td>
                         <td class="white">
@@ -111,34 +110,32 @@ Sci-Fi Films...<table id="productTable">
                             </form>
                         </td>
                     </tr>
-    
-                     <td class="white">
-                            <img src="Products/Super 8.jpg" alt="image" height=100px" width="70px">
+
+                    <tr>
+                        <td class="lightBlue">
+                            <img src="#" alt="Product images\This is the end.jpg">
                         </td>
-                        <td class="white">
-                            <strong>Super 8</strong>
+                        <td class="lightBlue">
+                            <strong>This is the End</strong>
                             <br>
-                            <span class="smallText"><p>During the summer of 1979, a group of friends witness a train
-                             crash and investigate subsequent unexplained events in their small town.</p></span>
+                            <span class="smallText">[ product description ]</span>
                         </td>
-                        <td class="white">[ price ]</td>
-                        <td class="white">
+                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td class="white">
-                            <img src="Products/The Matrix.jpg" alt="image" height=100px" width="50px">
+                            <img src="#" alt="Product images//ted.jpg">
                         </td>
                         <td class="white">
-                            <strong>The Matrix</strong>
+                            <strong>Ted</strong>
                             <br>
-                            <span class="smallText"><p>A computer hacker learns from mysterious rebels
-                                    about the true nature of his reality and his role in the war against
-                                    its controllers.</p></span>
+                            <span class="smallText">[ product description ]</span>
                         </td>
                         <td class="white">[ price ]</td>
                         <td class="white">

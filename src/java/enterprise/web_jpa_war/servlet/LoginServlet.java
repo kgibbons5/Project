@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet {
                 String uname = rs.getString("cID");
                 //Username is the coloumn name in the database table 
                 String pass = rs.getString("password");
-                if (((inputId.equals(uname)) && (inputPassword.equals(pass))) && (!found)) 
+                if (((inputId.equals(uname)) && (inputPassword.equals(pass)))) 
                 {
                     request.getRequestDispatcher("logSuccess.jsp").forward(request, response);
                     /*RequestDispatcher pd = getServletContext().getRequestDispatcher("/logSuccess.jsp");
