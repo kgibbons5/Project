@@ -76,6 +76,7 @@ border: 1px solid #ccc;
 background:#87AFC7;
 margin: 0px 0px 10px 0px;
 padding: 10px;
+float: left;
 }
 #categories {
 margin-bottom: 1px;
@@ -304,3 +305,9 @@ height: 610px;
 width: 665px;
 float: right;
 }
+
+#productTable { width: 600px }
+
+#productTable tr { height: 90px }
+
+#productTable td { width: 145px }

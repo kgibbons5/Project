@@ -3,7 +3,7 @@
 <head>
 <title>Home Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css" />
+<link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -42,8 +42,9 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+<form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
  
  </div>
@@ -77,14 +78,17 @@
   Action Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\Die Hard.jpg">
+                            <img src="Images/Die Hard.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
                             <strong>Die Hard</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>John McClane, officer of the NYPD, tries to save
+                                    wife Holly Gennaro and several others, taken hostage by German 
+                                    terrorist Hans Gruber during a Christmas party at the Nakatomi 
+                                    Plaza in Los Angeles.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -94,14 +98,17 @@
 
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images\Batman Begins.jpg">
+                            <img src="Images/Batman Begins.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
                             <strong>Batman Begins</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>After training with his mentor, Batman begins his
+                                    war on crime to free the crime-ridden Gotham City from corruption 
+                                    that the Scarecrow and the League of Shadows have cast upon it.
+                            </p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -111,14 +118,16 @@
 
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\Mission Impossible.jpg">
+                            <img src="Images/Mission Impossible.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
                             <strong>Mission Impossible</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>An American agent, under false suspicion of disloyalty,
+                                must discover and expose the real spy without the help of his organization.
+                            </p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -128,14 +137,16 @@
 
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images//Taken.jpg">
+                            <img src="Images/Taken.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
                             <strong>Taken<strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A retired CIA agent travels across Europe and relies
+                                on his old skills to save his estranged daughter, who has been kidnapped
+                                while on a trip to Paris.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">

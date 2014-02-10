@@ -3,7 +3,7 @@
 <head>
 <title>Drama</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css"/>
+<link rel="stylesheet" type="text/css" href="css//homePage.css"/>
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -42,8 +42,9 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+ <form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
  
  </div>
@@ -77,14 +78,17 @@
  Drama Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\the godfather.jpg">
+                            <img src="Images/the godfather.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            [ The Godfather ]
+                            <strong>The Godfather</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>The aging patriarch of an organized crime dynasty
+                                    transfers control of his clandestine empire to his reluctant son.
+                                    </p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                       
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -94,14 +98,16 @@
 
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images\the shawshank redemption.jpg">
+                            <img src="Images/the shawshank redemption.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            [ The Shawshank Redemption ]
+                            <strong>The Shawshank Redemption</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>Two imprisoned men bond over a number of years, 
+                                    finding solace and eventual redemption through acts of common decency.
+                                    </p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -110,33 +116,38 @@
                     </tr>
 
                     <tr>
-                        <td class="lightBlue">
-                            <img src="#" alt="Product images\reservoir dogs.jpg">
+                        <td class="white">
+                            <img src="Images/fight club.jpg" alt="image" height="100px" width="70px"/>
                         </td>
-                        <td class="lightBlue">
-                            [ Reservoir Dogs ]
+                        <td class="white">
+                            <strong>Fight Club</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>An insomniac office worker looking for a way to change
+                                    his life crosses paths with a devil-may-care soap maker and they form an
+                                    underground fight club that evolves into something much, much more...
+                                    </p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
-                        <td class="lightBlue">
+                        <td class="white"><pre>      price</pre></td>
+                        <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
 
-                    <tr>
-                        <td class="white">
-                            <img src="#" alt="Product images//The Notebook.jpg">
+                     <tr>
+                        <td class="lightBlue">
+                            <img src="Images/titanic.jpg" alt="image" height="100px" width="70px">
                         </td>
-                        <td class="white">
-                            [ The Notebook ]
+                        <td class="lightBlue">
+                            <strong>Titanic</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A seventeen-year-old aristocrat, expecting to be married
+                             to a rich claimant by her mother, falls in love with a kind but poor artist aboard
+                             the luxurious, ill-fated R.M.S. Titanic.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
-                        <td class="white">
+                        <td class="lightBlue"><pre>      price</pre></td>
+                        <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>

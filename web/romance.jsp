@@ -3,7 +3,7 @@
 <head>
 <title>Home Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css" />
+<link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -42,8 +42,9 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+<form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
  
  </div>
@@ -65,7 +66,7 @@
        <li><a href="horror.jsp">Horror</a></li>
        <li><a href="children.jsp">Childrens</a></li>
        <li><a href="thriller.jsp">Thriller</a></li>
-       <li class="last"><a href="romance.jsp">Romance</a></li>
+       <li class="last"><a href="categories\romance.jsp">Romance</a></li>
      </ul>
      <div class="clearthis">&nbsp;</div>
    </div>
@@ -74,70 +75,75 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
- Comedy Films...<table id="productTable">
+Romance Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="Product images/anchorman.jpg" alt="gjjgjgjgkj">
-                                
-                                
+                            <img src="Images/Love Actually.jpg" alt="image" height="100px" width="70px">
                         </td>
                         <td class="lightBlue">
-                            <strong>Anchorman</strong>
+                            <strong>Love Actually</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>Follows the lives of eight very different couples
+                            in dealing with their love lives in various loosely and interrelated tales all
+                            set during a frantic month before Christmas in London, England.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-
+                    
                     <tr>
                         <td class="white">
-                            <img src="Productimages/TheHangover.jpg" id="logo" alt="logo" height="40%" width="40%">
+                            <img src="Images/Dear John.jpg" alt="image" height="100px" width="70px">
                         </td>
                         <td class="white">
-                            <strong>The Hangover</strong>
+                            <strong>Dear John</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A romantic drama about a soldier who falls for
+                             a conservative college student while he's home on leave.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-
+                    
                     <tr>
-                        <td class="lightBlue">
-                            <img src="#" alt="Product images\This is the end.jpg">
+                        <td class="white">
+                            <img src="Images/Dirty Dancing.jpg" alt="image" height="100px" width="70px">
                         </td>
-                        <td class="lightBlue">
-                            <strong>This is the End</strong>
+                        <td class="white">
+                            <strong>Dirty Dancing</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>Spending the summer in a holiday camp with her family,
+                            Frances "Baby" Houseman falls in love with the camp's dance instructor 
+                            Johnny Castle.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
-                        <td class="lightBlue">
+                        <td class="white"><pre>      price</pre></td>
+                        <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-
-                    <tr>
+    
+                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images//ted.jpg">
+                            <img src="Images/The Notebook.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            <strong>Ted</strong>
+                            <strong>The Notebook</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A poor and passionate young man falls in love with a
+                                rich young woman and gives her a sense of freedom. They soon are separated
+                                by their social differences.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -146,7 +152,8 @@
                     </tr>
                 </table>
  </div>
- <div id="footer"> This is the Footer </div>
+ 
+<div id="footer"> This is the Footer </div>
  <!-- End Footer -->
 </div>
 

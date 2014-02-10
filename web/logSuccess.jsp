@@ -42,10 +42,10 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+ <form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
- 
  </div>
     
  </div>
@@ -58,15 +58,15 @@
        <h2>Categories</h2>
      </div>
      <ul>
-       <li><a href="categories\comedy.jsp">Comedy</a></li>
-       <li><a href="categories\drama.jsp">Drama</a></li>
-       <li><a href="categories\sci-fi.jsp">Sci-Fi</a></li>
-       <li><a href="categories\boxset.jsp">BoxSets</a></li>
-       <li><a href="categories\action.jsp">Action</a></li>
-       <li><a href="categories\horror.jsp">Horror</a></li>
-       <li><a href="categories\children.jsp">Childrens</a></li>
-       <li><a href="categories\thriller.jsp">Thriller</a></li>
-       <li class="last"><a href="categories\romance.jsp">Romance</a></li>
+       <li><a href="comedy.jsp">Comedy</a></li>
+       <li><a href="drama.jsp">Drama</a></li>
+       <li><a href="sci-fi.jsp">Sci-Fi</a></li>
+       <li><a href="boxset.jsp">BoxSets</a></li>
+       <li><a href="action.jsp">Action</a></li>
+       <li><a href="horror.jsp">Horror</a></li>
+       <li><a href="children.jsp">Childrens</a></li>
+       <li><a href="thriller.jsp">Thriller</a></li>
+       <li class="last"><a href="romance.jsp">Romance</a></li>
      </ul>
      <div class="clearthis">&nbsp;</div>
    </div>
@@ -76,7 +76,7 @@
  <!-- Begin Left Middle Column -->
  <div id="leftmiddle"> 
  <div class="DramaBox">
-               <a href="categories\drama.jsp"> 
+               <a href="drama.jsp"> 
                <span class="categoryLabelText">Drama
                </span>
                </a>
@@ -84,7 +84,7 @@
 
 <div class="KidsBox">
                 
-                   <a href="categories\children.jsp">
+                   <a href="children.jsp">
                    <span class="categoryLabelText">Kids</span>
                    </a>
                    
@@ -92,7 +92,7 @@
   
   <div class="RomanceBox">
                 
-                   <a href="categories\romance.jsp">
+                   <a href="romance.jsp">
                    <span class="categoryLabelText">Romance</span>
                    </a>
                    
@@ -104,7 +104,7 @@
 
  <div class="ThrillerBox">
                 
-                   <a href="categories\thriller.jsp">
+                   <a href="thriller.jsp">
                    <span class="categoryLabelText">Thriller</span>
                    </a>
                    
@@ -112,7 +112,7 @@
 
  <div class="SciBox">
                 
-                   <a href="categories\sci-fi.jsp">
+                   <a href="sci-fi.jsp">
                    <span class="categoryLabelText">Sci-Fi</span>
                    </a>
                    
@@ -120,7 +120,7 @@
            
            <div class="HorrorBox">
                 
-                   <a href="categories\horror.jsp">
+                   <a href="horror.jsp">
                    <span class="categoryLabelText">Horror</span>
                    </a>
                    
@@ -132,7 +132,7 @@
  <div id="rightcolumn"> 
  <div class="ComedyBox">
                 
-                   <a href="categories\comedy.jsp">
+                   <a href="comedy.jsp">
                    <span class="categoryLabelText">Comedy</span>
                    </a>
                    
@@ -140,7 +140,7 @@
 
  <div class="ActionBox">
                 
-                   <a href="categories\action.jsp">
+                   <a href="action.jsp">
                    <span class="categoryLabelText">Action</span>
                    </a>
                    
@@ -148,7 +148,7 @@
            
            <div class="BoxSetBox">
                 
-                   <a href="categories\boxset.jsp">
+                   <a href="boxset.jsp">
                    <span class="categoryLabelText">BoxSets</span>
                    </a>
                    

@@ -3,7 +3,7 @@
 <head>
 <title>Home Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css" />
+<link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -42,8 +42,9 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+ <form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
  
  </div>
@@ -65,7 +66,7 @@
        <li><a href="horror.jsp">Horror</a></li>
        <li><a href="children.jsp">Childrens</a></li>
        <li><a href="thriller.jsp">Thriller</a></li>
-       <li class="last"><a href="categories\romance.jsp">Romance</a></li>
+       <li class="last"><a href="romance.jsp">Romance</a></li>
      </ul>
      <div class="clearthis">&nbsp;</div>
    </div>
@@ -74,75 +75,76 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-Romance Films...<table id="productTable">
+     Box Sets...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\Love Actually.jpg">
+                            <img src="Images/lord of the rings.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            <strong>Love Actually</strong>
+                            <strong>The Lord of the Rings</strong>
                             <br>
-                            <span class="smallText"><p>Follows the lives of eight very different couples
-                            in dealing with their love lives in various loosely and interrelated tales all
-                            set during a frantic month before Christmas in London, England.</p></span>
+                            <span class="smallText"><p>An epic fantasy based on a series of novels by JRR Tolkien.
+                                    The story follows a young hobbit, Frodo Baggins as he travels across Middle Earth
+                                    on a quest, to destroy the "One Ring" and defeat the Dark Lord Sauron</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images\Dear John.jpg">
+                            <img src="Images/harry potter.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            <strong>Dear John</strong>
+                            <strong>Harry Potter</strong>
                             <br>
-                            <span class="smallText"><p>A romantic drama about a soldier who falls for
-                             a conservative college student while he's home on leave..</p></span>
+                            <span class="smallText"><p>The complete series, based on JK Rowling's best selling books.
+                                The story follows Harry Potter, a young boy whom after discovering he is a wizard, is taken 
+                                to Hogwarts school of witchcraft and wizardry. Here he embarks on numerous adventures with friends,
+                                Ron and Hermione as they fight against the dark Lord Voldemort.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\titanic.jpg">
+                            <img src="Images/star wars.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            <strong>Titanic</strong>
+                            <strong>Star Wars</strong>
                             <br>
-                            <span class="smallText"><p>A seventeen-year-old aristocrat, expecting to be married
-                             to a rich claimant by her mother, falls in love with a kind but poor artist aboard
-                             the luxurious, ill-fated R.M.S. Titanic.</p></span>
+                            <span class="smallText"><p>The complete space opera franchise by George Lucas.
+                                    Story follows Luke Skywalker as he trains to be a Jedi with Master Yoda
+                                    and embarks on saving the galaxy from the evil, Darth Vader.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images//Dirty Dancing.jpg">
+                            <img src="Images/saw.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            <strong>Dirty Dancing</strong>
+                            <strong>Saw<strong>
                             <br>
-                            <span class="smallText"><p>Spending the summer in a holiday camp with her family,
-                            Frances "Baby" Houseman falls in love with the camp's dance instructor 
-                            Johnny Castle.</p></span>
+                            <span class="smallText"><p>Complete series, following the stories of the victims
+                             of the inhumane and barbaric traps, constructed by the psychopathic, Jigsaw killer.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">

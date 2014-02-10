@@ -14,12 +14,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Katie
- */
+/* @author Katie*/
+
 @WebServlet(name = "LoginServlet", urlPatterns = {"/Login"})
-public class LoginServlet extends HttpServlet {
+
+public class LoginServlet extends HttpServlet 
+{
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,11 +32,11 @@ public class LoginServlet extends HttpServlet {
      */
  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, ClassNotFoundException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+                    throws ServletException, IOException, ClassNotFoundException 
+    { 
+       response.setContentType("text/html;charset=UTF-8");
+       PrintWriter out = response.getWriter();
        
-        
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://danu6.it.nuigalway.ie/mydb1253","mydb1253gk","lu9syq");
@@ -47,20 +47,20 @@ public class LoginServlet extends HttpServlet {
 
             String inputId         = (String) request.getParameter("id");
             String inputPassword   = (String) request.getParameter("password");
+            
             String errorMsg = null;
             int tmp = 0;
-            boolean found=false;
+            boolean found = false;
             
             while(rs.next()) 
             {
                 String uname = rs.getString("cID");
                 //Username is the coloumn name in the database table 
                 String pass = rs.getString("password");
+                
                 if (((inputId.equals(uname)) && (inputPassword.equals(pass)))) 
                 {
                     request.getRequestDispatcher("logSuccess.jsp").forward(request, response);
-                    /*RequestDispatcher pd = getServletContext().getRequestDispatcher("/logSuccess.jsp");
-                    pd.include(request, response);*/
                     found=true;
                     tmp++;
                 }
@@ -90,33 +90,30 @@ public class LoginServlet extends HttpServlet {
                      errorMsg ="Wrong Username and Password, Try Again!";
                      out.println("<center><font color=red size=5>"+errorMsg+"</font></center>");
                      found=true;
-                     tmp++;
-                    
-                }
-            
-                   
+                     tmp++;   
+                }  
             }
+            
             if (tmp==0) 
             {
-                 
-                 RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
+                RequestDispatcher pd = getServletContext().getRequestDispatcher("/index.jsp");
                 pd.include(request, response);
+                
                 if(inputId == null || inputId.equals(""))
                 errorMsg ="User ID can't be null or empty!";
                 
                 if(inputPassword == null || inputPassword.equals(""))
                 errorMsg ="Password can't be null or empty!";
                 out.println("<center><strong><font color=red size=5>"+errorMsg+"</font></strong></center>");
-                
-                
-                
-            
-              }
-        } catch (Exception e){}
+            } 
+        } 
         
+        catch (Exception e){
+        }
+       
         finally {
-                    out.close();
-                }
+        out.close();
+        } 
         
     }
 

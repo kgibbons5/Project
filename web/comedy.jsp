@@ -3,7 +3,7 @@
 <head>
 <title>Home Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css" />
+<link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -65,7 +65,7 @@
        <li><a href="horror.jsp">Horror</a></li>
        <li><a href="children.jsp">Childrens</a></li>
        <li><a href="thriller.jsp">Thriller</a></li>
-       <li class="last"><a href="categories\romance.jsp">Romance</a></li>
+       <li class="last"><a href="romance.jsp">Romance</a></li>
      </ul>
      <div class="clearthis">&nbsp;</div>
    </div>
@@ -74,73 +74,80 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-Sci-Fi Films...<table id="productTable">
+ Comedy Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="Products/Inception.jpg" alt="image" height="100px" width="70px"/>
+                            <img src="Images/anchorman.jpg" alt="image" height="100px" width="70px"/>
+                               
                         </td>
                         <td class="lightBlue">
-                        <strong>Inception</strong>
+                            <strong>Anchorman</strong>
                             <br>
-                            <span class="smallText"><p>A skilled extractor is offered a chance to regain 
-                                    his old life as payment for a task considered to be impossible.</p></span>
+                            <span class="smallText"><p>Ron Burgundy is San Diego's top rated newsman in 
+                                    the male-dominated broadcasting of the 70's, but that's all about to
+                                    change for Ron and his cronies when an ambitious woman is hired as a
+                                    new anchor.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-                        
+
                     <tr>
                         <td class="white">
-                            <img src="Products/E.T.jpg" alt="image" height="100px" width="70px">
+                            <img src="Images/The Hangover.jpg" alt="image" height="100px" width="70px"/>
                         </td>
-                        
                         <td class="white">
-                            <strong>E.T</strong>
+                            <strong>The Hangover</strong>
                             <br>
-                            <span class="smallText"><p>A troubled child summons the courage to help a 
-                            friendly alien escape Earth and return to his home-world</p></span>
+                            <span class="smallText"><p>Three buddies wake up from a bachelor party in Las
+                                    Vegas, with no memory of the previous night and the bachelor missing.
+                                    They make their way around the city in order to find their friend 
+                                    before his wedding.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-    
-                     <td class="white">
-                            <img src="Products/Super 8.jpg" alt="image" height=100px" width="70px">
+
+                    <tr>
+                        <td class="lightBlue">
+                            <img src="Images/This is the end.jpg" alt="image" height="100px" width="70px"/>
                         </td>
-                        <td class="white">
-                            <strong>Super 8</strong>
+                        <td class="lightBlue">
+                            <strong>This is the End</strong>
                             <br>
-                            <span class="smallText"><p>During the summer of 1979, a group of friends witness a train
-                             crash and investigate subsequent unexplained events in their small town.</p></span>
+                            <span class="smallText"><p>While attending a party at James Franco's house,
+                                    Seth Rogen, Jay Baruchel and many other celebrities are faced with
+                                    the apocalypse.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
-                        <td class="white">
+                        <td class="lightBlue"><pre>      price</pre></td>
+                        <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td class="white">
-                            <img src="Products/The Matrix.jpg" alt="image" height=100px" width="50px">
+                            <img src="Images/ted.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            <strong>The Matrix</strong>
+                            <strong>Ted</strong>
                             <br>
-                            <span class="smallText"><p>A computer hacker learns from mysterious rebels
-                                    about the true nature of his reality and his role in the war against
-                                    its controllers.</p></span>
+                            <span class="smallText"><p>As the result of a childhood wish, John Bennett's
+                                    teddy bear, Ted, came to life and has been by John's side ever since - 
+                                    a friendship that's tested when Lori, John's girlfriend of four years,
+                                    wants more from their relationship.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">

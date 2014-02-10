@@ -3,7 +3,7 @@
 <head>
 <title>Home Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css" />
+<link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -42,8 +42,9 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+ <form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
  
  </div>
@@ -74,17 +75,19 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-     Box Sets...<table id="productTable">
+ Childrens Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\lord of the rings.jpg">
+                            <img src="Images/Toy Story.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            <strong>The Lord of the Rings</strong>
+                            <strong>Toy Story</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A cowboy doll is profoundly threatened and 
+                                jealous when a new spaceman figure supplants him as top toy in 
+                                a boy's room.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -94,14 +97,16 @@
 
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images\harry potter.jpg">
+                            <img src="Images/despicable me.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            <strong>Harry Potter</strong>
+                            <strong>Despicable Me</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>When a criminal mastermind uses a trio of orphan girls
+                                as pawns for a grand scheme, he finds their love is profoundly changing him
+                                for the better.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -111,14 +116,17 @@
 
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\star wars.jpg">
+                            <img src="Images/Monsters inc.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            <strong>Star Wars</strong>
+                            <strong>Monsters inc.<strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>Monsters generate their city's power by scaring 
+                            children, but they are terribly afraid themselves of being contaminated by 
+                            children, so when one enters Monstropolis, top scarer Sulley finds his world
+                            disrupted.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -128,14 +136,16 @@
 
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images//saw.jpg">
+                            <img src="Images/peter pan.jpg" alt="image" height="100px" width="70px"/><img src="#" alt="Product images//peter pan.jpg">
                         </td>
                         <td class="white">
-                            <strong>Saw<strong>
+                            <strong>Peter Pan</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>Wendy and her brothers are whisked away to 
+                                    the magical world of Neverland with the hero of their stories, 
+                                    Peter Pan.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">

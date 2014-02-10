@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Horror</title>
+<title>Home Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css" />
+<link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -42,8 +42,9 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+<form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
  
  </div>
@@ -65,7 +66,7 @@
        <li><a href="horror.jsp">Horror</a></li>
        <li><a href="children.jsp">Childrens</a></li>
        <li><a href="thriller.jsp">Thriller</a></li>
-       <li class="last"><a href="romance.jsp">Romance</a></li>
+       <li class="last"><a href="categories\romance.jsp">Romance</a></li>
      </ul>
      <div class="clearthis">&nbsp;</div>
    </div>
@@ -74,68 +75,73 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-     Horror Films...<table id="productTable">
+Sci-Fi Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\Insidious.jpg">
+                            <img src="Images/Inception.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            [ Insidious ]
+                        <strong>Inception</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A skilled extractor is offered a chance to regain 
+                                    his old life as payment for a task considered to be impossible.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-
+                        
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images\Sinister.jpg">
+                            <img src="Images/E.T.jpg" alt="image" height="100px" width="70px">
                         </td>
+                        
                         <td class="white">
-                            [ Sinister ]
+                            <strong>E.T</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A troubled child summons the courage to help a 
+                            friendly alien escape Earth and return to his home-world</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-
-                    <tr>
-                        <td class="lightBlue">
-                            <img src="#" alt="Product images\The Ring.jpg">
+    
+                     <td class="white">
+                            <img src="Images/Super 8.jpg" alt="image" height=100px" width="70px">
                         </td>
-                        <td class="lightBlue">
-                            [ The Ring ]
+                        <td class="white">
+                            <strong>Super 8</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>During the summer of 1979, a group of friends witness a train
+                             crash and investigate subsequent unexplained events in their small town.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
-                        <td class="lightBlue">
+                        <td class="white"><pre>      price</pre></td>
+                        <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-
+                    
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images//Mama.jpg">
+                            <img src="Images/The Matrix.jpg" alt="image" height=100px" width="70px">
                         </td>
                         <td class="white">
-                            [ Mama ]
+                            <strong>The Matrix</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A computer hacker learns from mysterious rebels
+                                    about the true nature of his reality and his role in the war against
+                                    its controllers.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Home Page</title>
+<title>Horror</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css" />
+<link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -42,8 +42,9 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+ <form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
  
  </div>
@@ -74,17 +75,18 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-  Thriller Films...<table id="productTable">
+     Horror Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\se7en.jpg">
+                            <img src="Images/Insidious.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            <strong>Se7en</strong>
+                            <strong>Insidious</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A family looks to prevent evil spirits from trapping 
+                                    their comatose child in a realm called The Further.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -94,14 +96,16 @@
 
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images\fight club.jpg">
+                            <img src="Images/Sinister.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            <strong>Fight Club</strong>
+                            <strong>Sinister</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A true-crime writer finds a cache of 8mm home movies
+                                films that suggest the murder he is currently researching is the work of
+                                a serial killer whose career dates back to the 1960s.</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -111,14 +115,16 @@
 
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\silence of the lambs.jpg">
+                            <img src="Images/The Ring.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            <strong>Silence of the Lambs</strong>
+                            <strong>The Ring</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>A young journalist must investigate a mysterious 
+                                    videotape which seems to cause the death of anyone in a week of 
+                                    viewing it.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -128,14 +134,16 @@
 
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images//rear window.jpg">
+                            <img src="Images/Mama.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            <strong>Rear Window</strong>
+                            <strong>Mama</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>Annabel and Lucas are faced with the challenge 
+                                    of raising his young nieces that were left alone in the forest for
+                                    5 years.... but how alone were they?</p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">

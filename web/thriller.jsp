@@ -3,7 +3,7 @@
 <head>
 <title>Home Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="categories.css" />
+<link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -12,7 +12,7 @@
  
  <div id="header">
  <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
@@ -42,8 +42,9 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" method="get" action="http://www.google.com">
-       <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+<form id="tfnewsearch" action="Search" method="post">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
+  value="search" class="tfbutton">
 </form>
  
  </div>
@@ -74,17 +75,38 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
- Childrens Films...<table id="productTable">
+  Thriller Films...<table id="productTable">
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\Toy Story.jpg">
+                            <img src="Images/se7en.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            <strong>Toy Story</strong>
+                            <strong>Se7en</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                                <span class="smallText"><p>Two detectives, a rookie and a veteran,
+                                        hunt a serial killer who uses the seven deadly sins as his
+                                        modus operandi.</p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
+                        <td class="lightBlue">
+                            <form action="#" method="post">
+                                <input type="submit" value="purchase button">
+                            </form>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="lightBlue">
+                            <img src="Images/silence of the lambs.jpg" alt="image" height="100px" width="70px"/>
+                        </td>
+                        <td class="lightBlue">
+                            <strong>Silence of the Lambs</strong>
+                            <br>
+                            <span class="smallText"><p>A young F.B.I. cadet must confide in an incarcerated 
+                                    and manipulative killer to receive his help on catching another serial 
+                                    killer who skins his victims.</p><br></span>
+                        </td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
@@ -94,49 +116,37 @@
 
                     <tr>
                         <td class="white">
-                            <img src="#" alt="Product images\despicable me.jpg">
+                            <img src="Images/rear window.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
-                            <strong>Despicable Me</strong>
+                            <strong>Rear Window</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>Modern remake of Rear Window in which the lead character 
+                                    is paralyzed and lives in a high-tech home filled with assistive technology
+                                    </p><br></span>
                         </td>
-                        <td class="white">[ price ]</td>
+                        <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
                     </tr>
-
+      
                     <tr>
                         <td class="lightBlue">
-                            <img src="#" alt="Product images\Monsters inc.jpg">
+                            <img src="Images/reservoir dogs.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
-                            <strong>Monsters inc.<strong>
+                            <strong>Reservoir Dogs</strong>
                             <br>
-                            <span class="smallText">[ product description ]</span>
+                            <span class="smallText"><p>After a simple jewelery heist goes terribly wrong,
+                                    the surviving criminals begin to suspect that one of them is a police
+                                    informant.
+                                    </p><br></span>
                         </td>
-                        <td class="lightBlue">[ price ]</td>
+                        <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
-                            <form action="#" method="post">
-                                <input type="submit" value="purchase button">
-                            </form>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="white">
-                            <img src="#" alt="Product images//peter pan.jpg">
-                        </td>
-                        <td class="white">
-                            <strong>Peter Pan</strong>
-                            <br>
-                            <span class="smallText">[ product description ]</span>
-                        </td>
-                        <td class="white">[ price ]</td>
-                        <td class="white">
                             <form action="#" method="post">
                                 <input type="submit" value="purchase button">
                             </form>
