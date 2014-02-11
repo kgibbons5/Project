@@ -62,6 +62,9 @@ public class RegisterServlet extends HttpServlet
             ResultSet rs = stmt.executeQuery(sql);
             int tmp =0;
             
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/regFail.jsp");
+            PrintWriter pw= response.getWriter();
+            
            while(rs.next()) 
             {
                 tmp++;
@@ -69,17 +72,23 @@ public class RegisterServlet extends HttpServlet
               
             if (tmp>0)
             {
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/regFail.jsp");
-                PrintWriter pw= response.getWriter();
-                
-                BufferedReader br = new BufferedReader(new FileReader("/regFail.html"));
-                String line;
-                while((line = br.readLine()) != null)
-                {
-                  pw.println(line);
-                }
-                pw.println();
-                rd.include(request, response);
+                     pw.print("<div class=\"main\">");  
+                     pw.print("<center>"); 
+                     pw.print("<font size = \"4\" color=\"#151B54\"> "); 
+                     pw.print("<h1>Enter Details Below</h1>"); 
+                     pw.print("<form id=\"Register\" action=\"Register\" method=\"post\" size=\"4\">"); 
+                     pw.print("<table cellspacing=\"10\">"); 
+                     pw.print("<tr><td>ID:</td><td><input type=\"text\" id = \"id\" name=\"id\" /></td></tr>"); 
+                     pw.print("<tr><td>FirstName</td><td><input type=\"text\" id = \"firstName\" name=\"firstName\" /></td></tr>"); 
+                     pw.print("<tr><td>SurName</td><td><input type=\"text\" id = \"surName\" name=\"surName\" /></td></tr>"); 
+                     pw.print("<tr><td>Email</td><td><input type=\"text\" id = \"email\" name=\"email\" /></td></tr>"); 
+                     pw.print("<tr><td>Password</td><td><input type=\"Password\" id = \"password\" name=\"password\" /></td></tr> ");
+                     pw.print("</table>"); 
+                     pw.print("<input type=\"submit\" id=\"Register\" value=\"Register\"/>"); 
+                     pw.print("</center>"); 
+                     pw.print("</div>");
+                     pw.println("<center><p><font color=red> ID already exists </font></p></center>");
+                     rd.include(request, response);
             } 
             
             else
@@ -110,8 +119,6 @@ public class RegisterServlet extends HttpServlet
                 error=true;
             }
             
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/regFail.jsp");
-                PrintWriter pw= response.getWriter();
                 
             if(error)
             {
