@@ -11,14 +11,14 @@
  <!-- Begin Header -->
  
  <div id="header">
- <a href="#">
+ <a href=#>
             <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
-          <a href="#">
+          <a href="cart.jsp">
             <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
@@ -75,25 +75,23 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-  Thriller Films...<table id="productTable">
+     <center><strong><h2>Thriller Films...</h2></strong></center>
+             <table id="productTable">
                     <tr>
                         <td class="lightBlue">
                             <img src="Images/se7en.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
                             <strong>Se7en</strong>
-                            <br>
-                                <span class="smallText"><p>Two detectives, a rookie and a veteran,
-                                        hunt a serial killer who uses the seven deadly sins as his
-                                        modus operandi.</p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
+                    </div>
 
                     <tr>
                         <td class="lightBlue">
@@ -101,54 +99,39 @@
                         </td>
                         <td class="lightBlue">
                             <strong>Silence of the Lambs</strong>
-                            <br>
-                            <span class="smallText"><p>A young F.B.I. cadet must confide in an incarcerated 
-                                    and manipulative killer to receive his help on catching another serial 
-                                    killer who skins his victims.</p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
-
                     <tr>
                         <td class="white">
                             <img src="Images/rear window.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="white">
                             <strong>Rear Window</strong>
-                            <br>
-                            <span class="smallText"><p>Modern remake of Rear Window in which the lead character 
-                                    is paralyzed and lives in a high-tech home filled with assistive technology
-                                    </p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
-      
                     <tr>
                         <td class="lightBlue">
                             <img src="Images/reservoir dogs.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
                             <strong>Reservoir Dogs</strong>
-                            <br>
-                            <span class="smallText"><p>After a simple jewelery heist goes terribly wrong,
-                                    the surviving criminals begin to suspect that one of them is a police
-                                    informant.
-                                    </p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>

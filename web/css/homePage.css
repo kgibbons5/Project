@@ -306,8 +306,8 @@ width: 665px;
 float: right;
 }
 
-#productTable { width: 600px }
+#productTable { width: 660px }
 
 #productTable tr { height: 90px }
 
-#productTable td { width: 145px }
+#productTable td { width: 300px }

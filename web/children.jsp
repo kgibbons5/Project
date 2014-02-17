@@ -18,7 +18,7 @@
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
-          <a href="#">
+          <a href="cart.jsp">
             <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
@@ -75,7 +75,8 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
- Childrens Films...<table id="productTable">
+<center><strong><h2>Children's Films...</h2></strong></center>
+<table id="productTable">
                     <tr>
                         <td class="lightBlue">
                             <img src="Images/Toy Story.jpg" alt="image" height="100px" width="70px"/>
@@ -83,14 +84,12 @@
                         <td class="lightBlue">
                             <strong>Toy Story</strong>
                             <br>
-                            <span class="smallText"><p>A cowboy doll is profoundly threatened and 
-                                jealous when a new spaceman figure supplants him as top toy in 
-                                a boy's room.</p><br></span>
+                           
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -102,14 +101,12 @@
                         <td class="white">
                             <strong>Despicable Me</strong>
                             <br>
-                            <span class="smallText"><p>When a criminal mastermind uses a trio of orphan girls
-                                as pawns for a grand scheme, he finds their love is profoundly changing him
-                                for the better.</p><br></span>
+
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -121,34 +118,28 @@
                         <td class="lightBlue">
                             <strong>Monsters inc.<strong>
                             <br>
-                            <span class="smallText"><p>Monsters generate their city's power by scaring 
-                            children, but they are terribly afraid themselves of being contaminated by 
-                            children, so when one enters Monstropolis, top scarer Sulley finds his world
-                            disrupted.</p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
 
                     <tr>
                         <td class="white">
-                            <img src="Images/peter pan.jpg" alt="image" height="100px" width="70px"/><img src="#" alt="Product images//peter pan.jpg">
+                            <img src="Images/peter pan.jpg" alt="image" height="100px" width="70px">
                         </td>
                         <td class="white">
                             <strong>Peter Pan</strong>
                             <br>
-                            <span class="smallText"><p>Wendy and her brothers are whisked away to 
-                                    the magical world of Neverland with the hero of their stories, 
-                                    Peter Pan.</p><br></span>
+           
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>

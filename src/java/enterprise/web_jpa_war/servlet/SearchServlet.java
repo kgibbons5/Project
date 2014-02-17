@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "BrowseServlet", urlPatterns = {"/Search"})
+@WebServlet(name = "SearchServlet", urlPatterns = {"/Search"})
 public class SearchServlet extends HttpServlet {
 
     /**
@@ -115,7 +115,7 @@ public class SearchServlet extends HttpServlet {
                 pw.println("</div>"); 
                 
                 pw.println("<div id=\"browsecolumn\">"); 
-                pw.println("Result for \""+search+"\"...");
+                pw.println("<center><strong><h2>Search Results for \""+search+"\"...</h2></strong></center>");
                 pw.println("<table id=\"productTable\">"); 
                 pw.println("<tr>"); 
                 pw.println("<td class=\"lightBlue\">"); 
@@ -124,12 +124,11 @@ public class SearchServlet extends HttpServlet {
                 pw.println("<td class=\"lightBlue\">"); 
                 pw.println("<strong>"+name+"</strong>"); 
                 pw.println("<br>"); 
-                pw.println("<span class=\"smallText\"><p>"+des+"</p><br></span>"); 
                 pw.println("</td>"); 
                 pw.println("<td class=\"lightBlue\"><pre>"+price+"</pre></td>"); 
                 pw.println("<td class=\"lightBlue\">"); 
                 pw.println("<form action=\"#\" method=\"post\">"); 
-                pw.println("<input type=\"submit\" value=\"purchase button\">"); 
+                pw.println("<input type=\"submit\" value=\"View Product\">"); 
                 pw.println("</form>"); 
                 pw.println("</td>"); 
                 pw.println("</tr>");
@@ -207,7 +206,7 @@ public class SearchServlet extends HttpServlet {
                 pw.println("<center><h2>"); 
                 pw.println("No search result could be found for \""+search+"\"<table id=\"productTable\"><br>");
                 pw.println("<a href=\"logSuccess.jsp\"><strong>Return to Homepage</strong></a>");
-                pw.println("</center></h2>"); 
+                pw.println("</h2></center>"); 
                 pw.println("</div>");
                 
                 /*pw.println("<div id=\"footer\">");
@@ -261,15 +260,4 @@ public class SearchServlet extends HttpServlet {
             Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }

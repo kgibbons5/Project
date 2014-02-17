@@ -18,7 +18,7 @@
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
-          <a href="#">
+          <a href="cart.jsp">
             <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
@@ -75,7 +75,8 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-  Action Films...<table id="productTable">
+ <center><strong><h2>Action Films...</h2></strong></center>
+  <table id="productTable">
                     <tr>
                         <td class="lightBlue">
                             <img src="Images/Die Hard.jpg" alt="image" height="100px" width="70px"/>
@@ -83,15 +84,11 @@
                         <td class="lightBlue">
                             <strong>Die Hard</strong>
                             <br>
-                            <span class="smallText"><p>John McClane, officer of the NYPD, tries to save
-                                    wife Holly Gennaro and several others, taken hostage by German 
-                                    terrorist Hans Gruber during a Christmas party at the Nakatomi 
-                                    Plaza in Los Angeles.</p><br></span>
                         </td>
                         <td class="lightBlue"><pre>price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -103,15 +100,11 @@
                         <td class="white">
                             <strong>Batman Begins</strong>
                             <br>
-                            <span class="smallText"><p>After training with his mentor, Batman begins his
-                                    war on crime to free the crime-ridden Gotham City from corruption 
-                                    that the Scarecrow and the League of Shadows have cast upon it.
-                            </p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -123,14 +116,11 @@
                         <td class="lightBlue">
                             <strong>Mission Impossible</strong>
                             <br>
-                            <span class="smallText"><p>An American agent, under false suspicion of disloyalty,
-                                must discover and expose the real spy without the help of his organization.
-                            </p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -142,14 +132,11 @@
                         <td class="white">
                             <strong>Taken<strong>
                             <br>
-                            <span class="smallText"><p>A retired CIA agent travels across Europe and relies
-                                on his old skills to save his estranged daughter, who has been kidnapped
-                                while on a trip to Paris.</p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>

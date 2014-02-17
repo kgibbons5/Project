@@ -18,7 +18,7 @@
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
-          <a href="#">
+          <a href="cart.jsp">
             <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
@@ -75,7 +75,8 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
- Drama Films...<table id="productTable">
+<center><strong><h2>Drama Films...</h2></strong></center>
+<table id="productTable">
                     <tr>
                         <td class="lightBlue">
                             <img src="Images/the godfather.jpg" alt="image" height="100px" width="70px"/>
@@ -83,15 +84,12 @@
                         <td class="lightBlue">
                             <strong>The Godfather</strong>
                             <br>
-                            <span class="smallText"><p>The aging patriarch of an organized crime dynasty
-                                    transfers control of his clandestine empire to his reluctant son.
-                                    </p><br></span>
                         </td>
                        
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -103,14 +101,11 @@
                         <td class="white">
                             <strong>The Shawshank Redemption</strong>
                             <br>
-                            <span class="smallText"><p>Two imprisoned men bond over a number of years, 
-                                    finding solace and eventual redemption through acts of common decency.
-                                    </p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -122,15 +117,11 @@
                         <td class="white">
                             <strong>Fight Club</strong>
                             <br>
-                            <span class="smallText"><p>An insomniac office worker looking for a way to change
-                                    his life crosses paths with a devil-may-care soap maker and they form an
-                                    underground fight club that evolves into something much, much more...
-                                    </p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -142,14 +133,11 @@
                         <td class="lightBlue">
                             <strong>Titanic</strong>
                             <br>
-                            <span class="smallText"><p>A seventeen-year-old aristocrat, expecting to be married
-                             to a rich claimant by her mother, falls in love with a kind but poor artist aboard
-                             the luxurious, ill-fated R.M.S. Titanic.</p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>

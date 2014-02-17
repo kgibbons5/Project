@@ -11,14 +11,14 @@
  <!-- Begin Header -->
  
  <div id="header">
- <a href="#">
+ <a href=#>
             <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
-          <a href="#">
+          <a href="cart.jsp">
             <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
@@ -75,7 +75,8 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-     Box Sets...<table id="productTable">
+     <center><strong><h2>Box Sets...</h2></strong></center>
+     <table id="productTable">
                     <tr>
                         <td class="lightBlue">
                             <img src="Images/lord of the rings.jpg" alt="image" height="100px" width="70px"/>
@@ -83,14 +84,11 @@
                         <td class="lightBlue">
                             <strong>The Lord of the Rings</strong>
                             <br>
-                            <span class="smallText"><p>An epic fantasy based on a series of novels by JRR Tolkien.
-                                    The story follows a young hobbit, Frodo Baggins as he travels across Middle Earth
-                                    on a quest, to destroy the "One Ring" and defeat the Dark Lord Sauron</p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -102,15 +100,11 @@
                         <td class="white">
                             <strong>Harry Potter</strong>
                             <br>
-                            <span class="smallText"><p>The complete series, based on JK Rowling's best selling books.
-                                The story follows Harry Potter, a young boy whom after discovering he is a wizard, is taken 
-                                to Hogwarts school of witchcraft and wizardry. Here he embarks on numerous adventures with friends,
-                                Ron and Hermione as they fight against the dark Lord Voldemort.</p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -122,14 +116,11 @@
                         <td class="lightBlue">
                             <strong>Star Wars</strong>
                             <br>
-                            <span class="smallText"><p>The complete space opera franchise by George Lucas.
-                                    Story follows Luke Skywalker as he trains to be a Jedi with Master Yoda
-                                    and embarks on saving the galaxy from the evil, Darth Vader.</p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -141,13 +132,11 @@
                         <td class="white">
                             <strong>Saw<strong>
                             <br>
-                            <span class="smallText"><p>Complete series, following the stories of the victims
-                             of the inhumane and barbaric traps, constructed by the psychopathic, Jigsaw killer.</p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>

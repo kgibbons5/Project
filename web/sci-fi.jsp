@@ -11,14 +11,14 @@
  <!-- Begin Header -->
  
  <div id="header">
- <a href="#">
+ <a href=#>
             <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
-          <a href="#">
+          <a href="cart.jsp">
             <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
@@ -75,16 +75,14 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-Sci-Fi Films...<table id="productTable">
+<center><strong><h2>Sci-Fi Films...</h2></strong></center>
+<table id="productTable">
                     <tr>
                         <td class="lightBlue">
                             <img src="Images/Inception.jpg" alt="image" height="100px" width="70px"/>
                         </td>
                         <td class="lightBlue">
                         <strong>Inception</strong>
-                            <br>
-                            <span class="smallText"><p>A skilled extractor is offered a chance to regain 
-                                    his old life as payment for a task considered to be impossible.</p><br></span>
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
@@ -92,8 +90,7 @@ Sci-Fi Films...<table id="productTable">
                                 <input type="submit" value="purchase button">
                             </form>
                         </td>
-                    </tr>
-                        
+                    </tr> 
                     <tr>
                         <td class="white">
                             <img src="Images/E.T.jpg" alt="image" height="100px" width="70px">
@@ -102,8 +99,7 @@ Sci-Fi Films...<table id="productTable">
                         <td class="white">
                             <strong>E.T</strong>
                             <br>
-                            <span class="smallText"><p>A troubled child summons the courage to help a 
-                            friendly alien escape Earth and return to his home-world</p><br></span>
+                            
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
@@ -112,15 +108,14 @@ Sci-Fi Films...<table id="productTable">
                             </form>
                         </td>
                     </tr>
-    
+                   
+                    <tr>
                      <td class="white">
                             <img src="Images/Super 8.jpg" alt="image" height=100px" width="70px">
                         </td>
                         <td class="white">
                             <strong>Super 8</strong>
                             <br>
-                            <span class="smallText"><p>During the summer of 1979, a group of friends witness a train
-                             crash and investigate subsequent unexplained events in their small town.</p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
@@ -137,14 +132,11 @@ Sci-Fi Films...<table id="productTable">
                         <td class="white">
                             <strong>The Matrix</strong>
                             <br>
-                            <span class="smallText"><p>A computer hacker learns from mysterious rebels
-                                    about the true nature of his reality and his role in the war against
-                                    its controllers.</p><br></span>
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>

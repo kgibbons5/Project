@@ -11,14 +11,14 @@
  <!-- Begin Header -->
  
  <div id="header">
- <a href="#">
+ <a href=#>
             <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
-          <a href="#">
+          <a href="cart.jsp">
             <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
@@ -43,8 +43,8 @@
  <div id="tfnewsearch">
  
 <form id="tfnewsearch" action="Search" method="post">
-       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
-  value="search" class="tfbutton">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120">
+           <input type="submit" value="search" class="tfbutton">
 </form>
  
  </div>
@@ -75,7 +75,8 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-Romance Films...<table id="productTable">
+<center><strong><h2>Comedy Films...</h2></strong></center>
+<table id="productTable">
                     <tr>
                         <td class="lightBlue">
                             <img src="Images/Love Actually.jpg" alt="image" height="100px" width="70px">
@@ -83,14 +84,12 @@ Romance Films...<table id="productTable">
                         <td class="lightBlue">
                             <strong>Love Actually</strong>
                             <br>
-                            <span class="smallText"><p>Follows the lives of eight very different couples
-                            in dealing with their love lives in various loosely and interrelated tales all
-                            set during a frantic month before Christmas in London, England.</p><br></span>
+   
                         </td>
                         <td class="lightBlue"><pre>      price</pre></td>
                         <td class="lightBlue">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -102,13 +101,12 @@ Romance Films...<table id="productTable">
                         <td class="white">
                             <strong>Dear John</strong>
                             <br>
-                            <span class="smallText"><p>A romantic drama about a soldier who falls for
-                             a conservative college student while he's home on leave.</p><br></span>
+                        
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>
@@ -120,14 +118,12 @@ Romance Films...<table id="productTable">
                         <td class="white">
                             <strong>Dirty Dancing</strong>
                             <br>
-                            <span class="smallText"><p>Spending the summer in a holiday camp with her family,
-                            Frances "Baby" Houseman falls in love with the camp's dance instructor 
-                            Johnny Castle.</p><br></span>
+                      
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Productn">
                             </form>
                         </td>
                     </tr>
@@ -139,14 +135,12 @@ Romance Films...<table id="productTable">
                         <td class="white">
                             <strong>The Notebook</strong>
                             <br>
-                            <span class="smallText"><p>A poor and passionate young man falls in love with a
-                                rich young woman and gives her a sense of freedom. They soon are separated
-                                by their social differences.</p><br></span>
+                    
                         </td>
                         <td class="white"><pre>      price</pre></td>
                         <td class="white">
                             <form action="#" method="post">
-                                <input type="submit" value="purchase button">
+                                <input type="submit" value="View Product">
                             </form>
                         </td>
                     </tr>

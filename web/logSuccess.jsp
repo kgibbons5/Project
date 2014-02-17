@@ -11,15 +11,15 @@
  <!-- Begin Header -->
  
  <div id="header">
- <a href="#">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
+ <a href=#>
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" type="submit" id="logo" alt="logo" height="100%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
-          <a href="#">
-            <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
+          <a href="cart.jsp">
+            <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" value="Cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
          </div>
@@ -43,8 +43,8 @@
  <div id="tfnewsearch">
  
  <form id="tfnewsearch" action="Search" method="post">
-       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
-  value="search" class="tfbutton">
+       <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120">
+       <input type="submit" value="search" class="tfbutton">
 </form>
  </div>
     
@@ -80,7 +80,7 @@
                <span class="categoryLabelText">Drama
                </span>
                </a>
-           </div>
+</div>
 
 <div class="KidsBox">
                 
