@@ -60,7 +60,7 @@ public class LoginServlet extends HttpServlet
                 
                 if (((inputId.equals(uname)) && (inputPassword.equals(pass)))) 
                 {
-                    request.getRequestDispatcher("logSuccess.jsp").forward(request, response);
+                    request.getRequestDispatcher("/WEB-INF/view/category.jsp").forward(request, response);
                     found=true;
                     tmp++;
                 }
