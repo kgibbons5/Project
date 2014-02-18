@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Cart</title>
+<title>Home Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" type="text/css" href="css//homePage.css" />
 </head>
@@ -11,15 +11,15 @@
  <!-- Begin Header -->
  
  <div id="header">
- <a href="cart.jsp">
-            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="100%" width="20%">
+ <a href="#">
+            <img src="http://s25.postimg.org/fdz8rlb9b/dvdeals.gif" id="logo" alt="logo" height="%" width="20%">
             </a>
          
      <a href="index.jsp"><input type="submit" id="logout" value="Logout"/></a>
      
          <div id =  "cart">
           <a href="#">
-            <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" value="Cart" alt="cart" height="15%" width="15%">
+            <img src="http://www.buffalochamber.org/images/shopping_cart.png" id="cart" alt="cart" height="15%" width="15%">
             </a>
              </div>
          </div>
@@ -73,10 +73,9 @@
  </div>
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
- <div id="browsecolumn">  
-     <center>
-         <h1>This is the Cart</h1>
-     </center>
+ <div id="browsecolumn"> 
+ <!-- End Right Column -->
+ <!-- Begin Footer -->
  </div>
  <div id="footer"> This is the Footer </div>
  <!-- End Footer -->
