@@ -31,6 +31,7 @@ public class BrowseServlet extends HttpServlet {
     throws ServletException, IOException, ClassNotFoundException 
     {
         response.setContentType("text/html;charset=UTF-8");
+        String userPath = request.getServletPath();
         PrintWriter pw = response.getWriter();
         
         try 
@@ -38,13 +39,16 @@ public class BrowseServlet extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://danu6.it.nuigalway.ie/mydb1253","mydb1253gk","lu9syq");
 
+
+           
+            // TODO: Implement category request
+             if (userPath.equals("/Browse")) {
+                 
             String gen="Drama";
             String sql = "Select * from Product where genre = '"+gen+"'";
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
-
-            int tmp = 0;
-            
+        // if cart page is requested
             while(rs.next()) 
             {
                 String name = rs.getString("pName");
@@ -57,6 +61,57 @@ public class BrowseServlet extends HttpServlet {
                 pd.include(request, response);
                 
                 pw= response.getWriter();
+                pw.println("<div id=\"wrapper\">"); 
+                pw.println("<div id=\"header\">"); 
+                pw.println("<a href=\"#\"><img src=\"http://s25.postimg.org/fdz8rlb9b/dvdeals.gif\" id=\"logo\" height=\"100%\" width=\"20%\"></a>"); 
+                pw.println("<a href=\"index.jsp\"><input type=\"submit\" id=\"logout\" value=\"Logout\"/></a>");
+                pw.println("<div id =  \"cart\">"); 
+                pw.println("<a href=\"#\"><img src=\"http://www.buffalochamber.org/images/shopping_cart.png\" id=\"cart\" height=\"15%\" width=\"15%\"></a>"); 
+                pw.println("</div>"); 
+                pw.println("</div>");
+                
+                pw.println("<div id=\"navigation\">"); 
+                pw.println("<div class=\"tabs\">"); 
+                pw.println("<font color=\"white\">"); 
+                pw.println("<strong>"); 
+                pw.println("<a data-toggle=\"tab2\">Drama</a>"); 
+                pw.println("<a data-toggle=\"tab3\">Sci-Fi</a>"); 
+                pw.println("<a data-toggle=\"tab4\">BoxSets</a>"); 
+                pw.println("<a data-toggle=\"tab5\">Action</a>"); 
+                pw.println("<a data-toggle=\"tab5\">Horror</a>"); 
+                pw.println("<a data-toggle=\"tab5\">Childrens</a>"); 
+                pw.println("<a data-toggle=\"tab5\">Thriller</a>"); 
+                pw.println("<a data-toggle=\"tab5\">Romance</a>"); 
+                pw.println("</strong>"); 
+                pw.println("</font>"); 
+                pw.println("</div>");
+                pw.println("<div id=\"tfnewsearch\">"); 
+                pw.println("<form id=\"tfnewsearch\" action=\"Search\" method=\"post\">");
+                pw.println("<input type=\"text\" class=\"tftextinput\" name=\"searchInput\" size=\"21\" maxlength=\"120\"><input type=\"submit\"\n" +
+                           "value=\"search\" class=\"tfbutton\">"); 
+                pw.println("</form>"); 
+                pw.println("</div>"); 
+                pw.println(" </div>");
+                
+                pw.println(" <div id=\"leftcolumn\"> "); 
+                pw.println("<div id=\"categories\">"); 
+                pw.println("<div id=\"categories_header\">"); 
+                pw.println("<h2>Categories</h2>"); 
+                pw.println("</div>"); 
+                pw.println("<ul>"); 
+                pw.println("<li><a href=\"comedy.jsp\">Comedy</a></li>"); 
+                pw.println("<li><a href=\"drama.jsp\">Drama</a></li>"); 
+                pw.println("<li><a href=\"sci-fi.jsp\">Sci-Fi</a></li>"); 
+                pw.println("<li><a href=\"boxset.jsp\">BoxSets</a></li>"); 
+                pw.println("<li><a href=\"action.jsp\">Action</a></li>"); 
+                pw.println("<li><a href=\"horror.jsp\">Horror</a></li>"); 
+                pw.println("<li><a href=\"children.jsp\">Childrens</a></li>"); 
+                pw.println("<li><a href=\"thriller.jsp\">Thriller</a></li>"); 
+                pw.println("<li class=\"last\"><a href=\"romance.jsp\">Romance</a></li>"); 
+                pw.println("</ul>"); 
+                pw.println("<div class=\"clearthis\">&nbsp;</div>"); 
+                pw.println("</div>"); 
+                pw.println("</div>");
                 
                 pw.println("<div id=\"browsecolumn\">"); 
                 pw.println("<table id=\"productTable\">"); 
@@ -85,6 +140,7 @@ public class BrowseServlet extends HttpServlet {
                 
             }
         } 
+        }
         
         catch (Exception e){
         }
