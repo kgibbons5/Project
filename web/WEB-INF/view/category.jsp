@@ -1,17 +1,12 @@
-<%-- 
-    Document   : checkout
-    Created on : 17-Feb-2014, 16:03:48
-    Author     : Katie
---%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Category</title>
-    </head>
-    <body>
+
+<sql:query var="categories" dataSource="jdbc/Project">
+    SELECT * FROM Category
+</sql:query>
+
+
          <!-- Begin Navigation -->
  <div id="navigation"> 
  <div class="tabs">
@@ -41,8 +36,8 @@
  <!-- End Navigation -->
  <!-- Begin Left Column -->
  <div id="leftcolumn"> 
- <div id="categories">
-     <div id="categories_header">
+ <div id="cat">
+     <div id="cat_header">
        
        <h2>Categories</h2>
      </div>
@@ -62,92 +57,27 @@
  
  </div>
  <!-- End Left Column -->
- <!-- Begin Left Middle Column -->
- <div id="leftmiddle"> 
- <div class="DramaBox">
-               <a href="drama.jsp"> 
-               <span class="categoryLabelText">Drama
-               </span>
-               </a>
-           </div>
-
-<div class="KidsBox">
-                
-                   <a href="children.jsp">
-                   <span class="categoryLabelText">Kids</span>
-                   </a>
-                   
-              </div>
-  
-  <div class="RomanceBox">
-                
-                   <a href="romance.jsp">
-                   <span class="categoryLabelText">Romance</span>
-                   </a>
-                   
-              </div>
- </div>
- <!-- End Left Middle Column -->
- <!-- Begin Right Middle Column -->
- <div id="rightmiddle"> 
-
- <div class="ThrillerBox">
-                
-                   <a href="thriller.jsp">
-                   <span class="categoryLabelText">Thriller</span>
-                   </a>
-                   
-              </div>
-
- <div class="SciBox">
-                
-                   <a href="sci-fi.jsp">
-                   <span class="categoryLabelText">Sci-Fi</span>
-                   </a>
-                   
-              </div>
-           
-           <div class="HorrorBox">
-                
-                   <a href="horror.jsp">
-                   <span class="categoryLabelText">Horror</span>
-                   </a>
-                   
-              </div>
-
- </div>
- <!-- End Right Middle Column -->
- <!-- Begin Right Column -->
- <div id="rightcolumn"> 
- <div class="ComedyBox">
-                
-                   <a href="comedy.jsp">
-                   <span class="categoryLabelText">Comedy</span>
-                   </a>
-                   
-              </div>
-
- <div class="ActionBox">
-                
-                   <a href="action.jsp">
-                   <span class="categoryLabelText">Action</span>
-                   </a>
-                   
-              </div>
-           
-           <div class="BoxSetBox">
-                
-                   <a href="boxset.jsp">
-                   <span class="categoryLabelText">BoxSets</span>
-                   </a>
-                   
-              </div>
-  
  
+ <!-- Begin Left Middle Column -->
+ <div id="browsecolumn"> 
+     
+     <c:forEach var="category" items="${categories.rows}">
+         
+         <div class="DvdBox">
+                        <a href="category?${category.id}">
+
+                            <span class="catLabelText">${category.genre}</span>
+
+                            <img src="${initParam.categoryImagePath}${category.genre}.jpg"
+                                 alt="${category.genre}">
+                        </a>
+                    </div>
+         
+     </c:forEach>
+     
+     
  </div>
  <!-- End Right Column -->
 
 
 <!-- End Wrapper -->
-</body>
-</html>
