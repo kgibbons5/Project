@@ -20,11 +20,9 @@
                 </div>
             </c:when>
             <c:otherwise>
-                <a href="category?${category.id}" class="tabs">
-                    <div class="tabContent">
-                        ${category.genre}
-                    </div>
-                </a>
+                 <div class="tabs">
+                 <a data-toggle=" ${category.id}" href="category?${category.id}">${category.genre}</a>
+                </div>
             </c:otherwise>
         </c:choose>
 
