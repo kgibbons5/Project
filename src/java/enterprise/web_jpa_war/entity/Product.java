@@ -15,7 +15,7 @@ public class Product {
 
     @Id
     @Column(name = "pID")
-    private String id;
+    private int id;
 
     @Column(name = "pName")
     private String name;
@@ -34,13 +34,16 @@ public class Product {
      
      @Column(name = "description")
     private String des;
+     
+     @Column(name = "category_id")
+    private int cid;
     
     
     //Creates a new instance of Customer
     public Product() {
     }
 
-    public Product(String id, String name, String genre, String stock, String price, String img, String des) {
+    public Product(int id, String name, String genre, String stock, String price, String img, String des, int cid) {
         this.id = id;
         this.name = name;
         this.genre  = genre;
@@ -48,9 +51,10 @@ public class Product {
         this.price = price;
         this.img = img;
         this.des = des;
+        this.cid = cid;
     }
 
-    public String getId() {
+    public int getId() {
         return this.id;
     }
 
@@ -76,5 +80,9 @@ public class Product {
       
       public String getDes() {
         return this.des;
+    }
+      
+      public int getCid() {
+        return this.cid;
     }
 }

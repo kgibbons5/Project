@@ -1,13 +1,31 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
+<%-- 
+    Document   : category
+    Created on : 24-Feb-2014, 17:25:14
+    Author     : Katie
+--%>
 
 <sql:query var="categories" dataSource="jdbc/Project">
     SELECT * FROM Category
 </sql:query>
 
+<sql:query var="selectedCategory" dataSource="jdbc/Project">
+    SELECT genre FROM Category WHERE id = ?
+    <sql:param value="${pageContext.request.queryString}"/>
+</sql:query>
+    
+<sql:query var="categoryProducts" dataSource="jdbc/Project">
+    SELECT * FROM Product WHERE category_id = ?
+    <sql:param value="${pageContext.request.queryString}"/>
+</sql:query>
 
-         <!-- Begin Navigation -->
+<!-- Begin Wrapper -->
+<div id="wrapper">
+ 
+    
+ <!-- Begin Navigation -->
  <div id="navigation"> 
  <div class="tabs">
      <font color="white">
@@ -26,18 +44,18 @@
  </div>
  <div id="tfnewsearch">
  
- <form id="tfnewsearch" action="Search" method="post">
+<form id="tfnewsearch" action="Search" method="post">
        <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
   value="search" class="tfbutton">
 </form>
+ 
  </div>
     
  </div>
- <!-- End Navigation -->
- <!-- Begin Left Column -->
+ 
  <div id="leftcolumn"> 
- <div id="cat">
-     <div id="cat_header">
+ <div id="categories">
+     <div id="categories_header">
        
        <h2>Categories</h2>
      </div>
@@ -57,31 +75,40 @@
  
  </div>
  <!-- End Left Column -->
- 
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
+     <p id="catTitle">${selectedCategory.rows[0].genre}</p>
      
-     <c:forEach var="category" items="${categories.rows}">
-         
-         <div class="DvdBox">
-             
-                        <a href="category?${category.id}">
-                        <span class="catLabelText">${category.genre}</span>
+     <table id="productTable">
+                     <c:forEach var="product" items="${categoryProducts.rows}" varStatus="iter">
 
-                        <img src="${initParam.categoryImagePath}${category.genre}.jpg"
-                                 alt="${category.genre}"  height="90%" width="100%" >
-                            
-                              
-                            
-                        </a>
-                                 
-                    </div>
-         
-     </c:forEach>
+        <tr class="${((iter.index % 2) == 0) ? 'lightBlue' : 'white'}">
+            <td1>
+                <img src="${initParam.productImagePath}${product.pName}.jpg"
+                    alt="${product.pName}"height="100px" width="70px">
+            </td1>
+            <td2>
+                ${product.pName}
+                <br>
+                <span class="smallText">${product.description}</span>
+            </td2>
+            <td3>
+                &euro; ${product.pPrice}
+            </td3>
+            <td4>
+                <form action="addToCart" method="post">
+                    <input type="hidden"
+                           name="productId"
+                           value="${product.pID}">
+                    <input type="submit"
+                           value="add to cart">
+                </form>
+            </td4>
+        </tr>
+
+    </c:forEach>
+                </table>
      
-     
+  
  </div>
- <!-- End Right Column -->
-
-
-<!-- End Wrapper -->
+</div>
