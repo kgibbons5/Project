@@ -25,7 +25,9 @@ import javax.servlet.http.HttpServletResponse;
                            "/viewCart",
                            "/updateCart",
                            "/checkout",
-                           "/purchase"})
+                           "/purchase",
+                           "/cart"
+                           })
 
 public class ControllerServlet extends HttpServlet {
 
@@ -48,13 +50,12 @@ public class ControllerServlet extends HttpServlet {
 
         // if cart page is requested
         } else if (userPath.equals("/viewCart")) {
-            // TODO: Implement cart page request
-
-            userPath = "/cart";
+              userPath="/cart";
+            
 
         // if checkout page is requested
         } else if (userPath.equals("/checkout")) {
-            // TODO: Implement checkout page request
+            userPath="/cart";
 
         // if user switches language
         } else if (userPath.equals("/chooseLanguage")) {

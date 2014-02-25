@@ -64,13 +64,17 @@
      <c:forEach var="category" items="${categories.rows}">
          
          <div class="DvdBox">
+             
                         <a href="category?${category.id}">
+                        <span class="catLabelText">${category.genre}</span>
 
-                            <span class="catLabelText">${category.genre}</span>
-
-                            <img src="${initParam.categoryImagePath}${category.genre}.jpg"
-                                 alt="${category.genre}">
+                        <img src="${initParam.categoryImagePath}${category.genre}.jpg"
+                                 alt="${category.genre}"  height="90%" width="100%" >
+                            
+                              
+                            
                         </a>
+                                 
                     </div>
          
      </c:forEach>
