@@ -8,25 +8,31 @@
 
 
          <!-- Begin Navigation -->
- <div id="navigation"> 
+ <div id="navigation">
+     <div class="tabs" id="">
     <c:forEach var="category" items="${categories.rows}">
-
+        
         <c:choose>
             <c:when test="${category.id == pageContext.request.queryString}">
-                <div class="tabs" id="selectedCategory">
+                
                     <span class="tabContent">
                         ${category.genre}
                     </span>
-                </div>
+                
             </c:when>
             <c:otherwise>
-                 <div class="tabs">
+                <font colour="white">
+                <strong>
+                    
                  <a data-toggle=" ${category.id}" href="category?${category.id}">${category.genre}</a>
-                </div>
+                </strong>
+                </font>
+                
             </c:otherwise>
         </c:choose>
 
     </c:forEach>
+         </div>
  <div id="tfnewsearch">
  
  <form id="tfnewsearch" action="Search" method="post">

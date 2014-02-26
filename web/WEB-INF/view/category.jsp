@@ -26,29 +26,37 @@
  
     
  <!-- Begin Navigation -->
- <div id="navigation"> 
- <div class="tabs">
-     <font color="white">
-    <strong>
-   <a data-toggle="tab1" href="comedy.jsp">Comedy</a>
-   <a data-toggle="tab2"href="drama.jsp">Drama</a>
-   <a data-toggle="tab3"href="sci-fi.jsp">Sci-Fi</a>
-   <a data-toggle="tab4"href="boxset.jsp">BoxSets</a>
-   <a data-toggle="tab5"href="action.jsp">Action</a>
-   <a data-toggle="tab6"href="horror.jsp">Horror</a>
-   <a data-toggle="tab7"href="children.jsp">Childrens</a>
-   <a data-toggle="tab8"href="thriller.jsp">Thriller</a>
-   <a data-toggle="tab9"href="romance.jsp">Romance</a>
-    </strong>
-    </font>
- </div>
+ <div id="navigation">
+     <div class="tabs" >
+    <c:forEach var="category" items="${categories.rows}">
+        
+        <c:choose>
+            <c:when test="${category.id == pageContext.request.queryString}">
+                
+                    <span class="tabContent">
+                        ${category.genre}
+                    </span>
+                
+            </c:when>
+            <c:otherwise>
+                
+                <font colour="white">
+                <strong>
+                 <a data-toggle=" ${category.id}" href="category?${category.id}">${category.genre}</a>
+                </strong>
+                </font>
+                
+            </c:otherwise>
+        </c:choose>
+
+    </c:forEach>
+         </div>
  <div id="tfnewsearch">
  
-<form id="tfnewsearch" action="Search" method="post">
+ <form id="tfnewsearch" action="Search" method="post">
        <input type="text" class="tftextinput" name="searchInput" size="21" maxlength="120"><input type="submit"
   value="search" class="tfbutton">
 </form>
- 
  </div>
     
  </div>
@@ -78,24 +86,27 @@
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
      <p id="catTitle">${selectedCategory.rows[0].genre}</p>
-     
+     <div id="productcolumn">
      <table id="productTable">
+         
                      <c:forEach var="product" items="${categoryProducts.rows}" varStatus="iter">
 
         <tr class="${((iter.index % 2) == 0) ? 'lightBlue' : 'white'}">
-            <td1>
+            <div id="imagecolumn">
                 <img src="${initParam.productImagePath}${product.pName}.jpg"
                     alt="${product.pName}"height="100px" width="70px">
-            </td1>
-            <td2>
+               
+            </div>
+                
+            <div id="descriptioncolumn">
                 ${product.pName}
                 <br>
                 <span class="smallText">${product.description}</span>
-            </td2>
-            <td3>
+            </div>
+            <div id="pricecolumn">
                 &euro; ${product.pPrice}
-            </td3>
-            <td4>
+            </div>
+            <div id="purchasecolumn">
                 <form action="addToCart" method="post">
                     <input type="hidden"
                            name="productId"
@@ -103,11 +114,13 @@
                     <input type="submit"
                            value="add to cart">
                 </form>
-            </td4>
+                   </div>
         </tr>
 
     </c:forEach>
+         
                 </table>
+     </div>
      
   
  </div>

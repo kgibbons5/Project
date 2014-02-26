@@ -23,7 +23,6 @@ background:#87AFC7;
 #navigation {
 float: left;
 width: 900px;
-
 color: #333;
 padding: 10px;
 margin-left:-8px;
@@ -126,12 +125,17 @@ text-decoration: none;
 #cat li a:hover {
 color: #56567c;
 }
+#catTitle
+{
+color:black;
+font-size: 30px;
+font-weight: bold;
+}
 
 .tabs a
 {
  cursor: pointer;
  padding: 5px;
- 
  background: #357EC7;
  border-style:double;
  border-width:4px;
@@ -155,6 +159,7 @@ color: #56567c;
  margin: 1px ;
  padding: 1px;
  text-decoration: none;
+ color:#008000;
  
  
 }
@@ -261,7 +266,57 @@ float: right;
 
 #productTable { width: 600px }
 
-#productTable tr { height: 90px }
+#imagecolumn
+{
+    
+    width: 75px;
+    height: 110px;
+    margin-top:50px; 
+    
+   
+    
+    
+}
+#descriptioncolumn
+{
+    
+    width: 400px;
+    margin-left: 83px;
+    margin-top: -100px;
+    
+    
+    
+}
+#pricecolumn
+{
+    
+    width:75px;
+    margin-left: 500px;
+    margin-top: -10px
+    
+}
+#productcolumn
+{
+    height:120px;
+    width:665px;
+   
+}
+#purchasecolumn
+{
+    
+    width:75px;
+    margin-left: 555px;
+    margin-top: -20px;
+        
+}
+#productTable tr 
+{ 
+    height: 120px;
+}
+tr.spaceUnder>td
+{
+    padding-bottom: 1em;
+}
 
 #productTable td { width: 145px }
 
