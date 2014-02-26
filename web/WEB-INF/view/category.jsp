@@ -85,30 +85,30 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-     <strong><h2 id="catTitle">${selectedCategory.rows[0].genre}</h2></strong><br>
+     <center><strong><h2 id="catTitle">${selectedCategory.rows[0].genre}</h2></strong></center><br>
      
      <table id="productTable">
                      <c:forEach var="product" items="${categoryProducts.rows}" varStatus="iter">
 
         <tr>
-            <td class="lightBlue">
+            <td>
                 <img src="${initParam.productImagePath}${product.pName}.jpg"
-                    alt="${product.pName}"height="100px" width="70px">
+                    alt="img" height="100px" width="70px">
             </td>
             
-            <td class = lightBlue colspan="3">
+            <td colspan="2">
                 
-                <center><strong>${product.pName}</strong></center>
+                <strong>${product.pName}</strong><br>
                 ${product.description}<br><br><br>
                 
             </td>
-            <td class="lightBlue">
+            <td>
                 <center>
               &euro; ${product.pPrice}
                 </center>
             </td>
             
-            <td class="lightBlue">
+            <td>
                 <center>
                 <form action="addToCart" method="post">
                     <input type="hidden"

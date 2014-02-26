@@ -309,15 +309,11 @@ float: right;
     margin-top: -20px;
         
 }
-#productTable tr 
-{ 
-    height: 120px;
-}
-tr.spaceUnder>td
-{
-    padding-bottom: 1em;
-}
 
-#productTable td { width: 145px }
+#productTable{ width: 660px;}
+
+#productTable tr { height: 120px;}
+
+#productTable td { width: 120px }
 
 
