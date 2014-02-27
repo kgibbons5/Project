@@ -6,18 +6,13 @@
 
 package controller;
 
-import enterprise.web_jpa_war.entity.Category;
-import enterprise.web_jpa_war.entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Collection;
-import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import session.CategoryFacade;
 
 /**
  *
@@ -31,9 +26,9 @@ import session.CategoryFacade;
                            "/updateCart",
                            "/checkout",
                            "/purchase",
-                           "/cart",
                            "/home"
-                           })
+            
+            })
 
 public class ControllerServlet extends HttpServlet {
 
@@ -44,18 +39,6 @@ public class ControllerServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
-    @EJB
-    private CategoryFacade categoryFacade; 
-    
-    
-    @Override
-    public void init() throws ServletException {
-
-        // store category list in servlet context
-        getServletContext().setAttribute("categories", categoryFacade.findAll());
-     }
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
@@ -64,32 +47,17 @@ public class ControllerServlet extends HttpServlet {
 
         // if category page is requested
         if (userPath.equals("/category")) {
-        // get categoryId from request
-        String categoryId = request.getQueryString();
-
-//        if (categoryId != null) {
-//            
-//            // get selected category
-//            Category selectedCategory = categoryFacade.find(Short.parseShort(categoryId));
-//            
-//            // place selected category in request scope
-//            request.setAttribute("selectedCategory", selectedCategory);
-//            
-//            // get all products for selected category
-//            Collection<Product> categoryProducts = selectedCategory.getProductCollection();
-//            
-//           // place category products in request scope
-//            request.setAttribute("categoryProducts", categoryProducts);
-//        }
+            // TODO: Implement category request
 
         // if cart page is requested
         } else if (userPath.equals("/viewCart")) {
-              userPath="/cart";
-            
+            // TODO: Implement cart page request
+
+            userPath = "/cart";
 
         // if checkout page is requested
         } else if (userPath.equals("/checkout")) {
-            userPath="/cart";
+            // TODO: Implement checkout page request
 
         // if user switches language
         } else if (userPath.equals("/chooseLanguage")) {

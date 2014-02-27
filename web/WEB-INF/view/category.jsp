@@ -26,13 +26,12 @@
  
     
  <!-- Begin Navigation -->
- <div id="navigation"> 
-     <div class="tabs">
+ <div id="navigation">
+     <div class="tabs" >
     <c:forEach var="category" items="${categories.rows}">
-
+        
         <c:choose>
             <c:when test="${category.id == pageContext.request.queryString}">
-                
                 
                     <span class="tabContent">
                         ${category.genre}
@@ -40,12 +39,12 @@
                 
             </c:when>
             <c:otherwise>
-                 
-                      <font color="white">
-                      <strong>
+                
+                <font colour="white">
+                <strong>
                  <a data-toggle=" ${category.id}" href="category?${category.id}">${category.genre}</a>
-                    </strong>
-                    </font>
+                </strong>
+                </font>
                 
             </c:otherwise>
         </c:choose>
@@ -61,6 +60,7 @@
  </div>
     
  </div>
+ 
  <div id="leftcolumn"> 
  <div id="categories">
      <div id="categories_header">
@@ -85,33 +85,28 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-     <center><strong><p id="catTitle">
-    <span style="background-color: #f5eabe; padding: 7px;">${selectedCategory.genre}</span>
-</p></strong></center><br>
-     
+     <p id="catTitle">${selectedCategory.rows[0].genre}</p>
+     <div id="productcolumn">
      <table id="productTable">
+         
                      <c:forEach var="product" items="${categoryProducts.rows}" varStatus="iter">
 
-        <tr>
-            <td>
+        <tr class="${((iter.index % 2) == 0) ? 'lightBlue' : 'white'}">
+            <div id="imagecolumn">
                 <img src="${initParam.productImagePath}${product.pName}.jpg"
-                    alt="img" height="100px" width="70px">
-            </td>
-            
-            <td colspan="2">
+                    alt="${product.pName}"height="100px" width="70px">
+               
+            </div>
                 
-                <strong>${product.pName}</strong><br>
-                ${product.description}<br><br><br>
-                
-            </td>
-            <td>
-                <center>
-              &euro; ${product.pPrice}
-                </center>
-            </td>
-            
-            <td>
-                <center>
+            <div id="descriptioncolumn">
+                ${product.pName}
+                <br>
+                <span class="smallText">${product.description}</span>
+            </div>
+            <div id="pricecolumn">
+                &euro; ${product.pPrice}
+            </div>
+            <div id="purchasecolumn">
                 <form action="addToCart" method="post">
                     <input type="hidden"
                            name="productId"
@@ -119,12 +114,13 @@
                     <input type="submit"
                            value="add to cart">
                 </form>
-                    <center>
-            </td>
+                   </div>
         </tr>
 
     </c:forEach>
+         
                 </table>
+     </div>
      
   
  </div>

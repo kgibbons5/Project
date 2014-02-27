@@ -2,15 +2,15 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
 
-<%--<sql:query var="categories" dataSource="jdbc/Project">
+<sql:query var="categories" dataSource="jdbc/Project">
     SELECT * FROM Category
-</sql:query>--%>
+</sql:query>
 
 
          <!-- Begin Navigation -->
  <div id="navigation">
      <div class="tabs" id="">
-   <c:forEach var="category" items="${categories}">
+   <c:forEach var="category" items="${categories.rows}">
         
         <c:choose>
             <c:when test="${category.id == pageContext.request.queryString}">
@@ -70,7 +70,7 @@
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
      
-     <c:forEach var="category" items="${categories}">
+     <c:forEach var="category" items="${categories.rows}">
          
          <div class="DvdBox">
                         <a href="category?${category.id}">
