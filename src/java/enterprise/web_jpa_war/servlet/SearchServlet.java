@@ -115,28 +115,38 @@ public class SearchServlet extends HttpServlet {
                 pw.println("</div>"); 
                 
                 pw.println("<div id=\"browsecolumn\">"); 
-                pw.println("<center><strong><h2>Search Results for \""+search+"\"...</h2></strong></center>");
+                pw.println("<center><h2>");
+                pw.println("Search Results for \""+search+"\"...");
+                pw.println("</h2></center>");
                 pw.println("<table id=\"productTable\">"); 
                 pw.println("<tr>"); 
-                pw.println("<td class=\"lightBlue\">"); 
+                pw.println("<td>"); 
                 pw.println("<img src=\""+img+"\" alt=\"image\" height=\"100px\" width=\"70px\"/>"); 
                 pw.println("</td>"); 
-                pw.println("<td class=\"lightBlue\">"); 
+                pw.println("<td colspan=\"2\">"); 
                 pw.println("<strong>"+name+"</strong>"); 
                 pw.println("<br>"); 
+                pw.println("<span class=\"smallText\"><p>"+des+"</p><br></span>"); 
                 pw.println("</td>"); 
-                pw.println("<td class=\"lightBlue\"><pre>"+price+"</pre></td>"); 
-                pw.println("<td class=\"lightBlue\">"); 
-                pw.println("<form action=\"#\" method=\"post\">"); 
-                pw.println("<input type=\"submit\" value=\"View Product\">"); 
+                pw.println("<td><center>&euro;"+price+"</center></td>"); 
+                pw.println("<td>"); 
+                pw.println("<center>"); 
+                pw.println("<form action=\"addToCart\" method=\"post\">"); 
+                pw.println("<input type=\"hidden\""); 
+                pw.println("name=\"productId\""); 
+                pw.println("value=\"${product.pID}\">"); 
+                pw.println("<input type=\"submit\""); 
+                pw.println("value=\"Add to Cart\">"); 
                 pw.println("</form>"); 
+                pw.println("</center>");
                 pw.println("</td>"); 
-                pw.println("</tr>");
-                pw.println("</table>"); 
-                pw.println("</div>"); 
+                pw.println("</tr");
+                pw.println("</table"); 
+                pw.println("</div"); 
                 
                 /*pw.println("<div id=\"footer\">");
                 pw.println("This is the Footer"); 
+                pw.println("</div>");
                 pw.println("</div>");*/
                 
                 found=true;
@@ -205,15 +215,16 @@ public class SearchServlet extends HttpServlet {
                 pw.println("<div id=\"browsecolumn\">"); 
                 pw.println("<center><h2>"); 
                 pw.println("No search result could be found for \""+search+"\"<table id=\"productTable\"><br>");
-                pw.println("<a href=\"logSuccess.jsp\"><strong>Return to Homepage</strong></a>");
+                pw.println("Please Try Again!");
                 pw.println("</h2></center>"); 
                 pw.println("</div>");
                 
                 /*pw.println("<div id=\"footer\">");
                 pw.println("This is the Footer"); 
+                pw.println("</div>");
                 pw.println("</div>");*/
-                }
-        } 
+        }
+        }
         
         catch (Exception e){
         }
