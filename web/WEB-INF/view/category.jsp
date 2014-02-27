@@ -85,7 +85,9 @@
  <!-- End Left Column -->
  <!-- Begin Left Middle Column -->
  <div id="browsecolumn"> 
-     <center><strong><h2 id="catTitle">${selectedCategory.rows[0].genre}</h2></strong></center><br>
+     <center><strong><p id="catTitle">
+    <span style="background-color: #f5eabe; padding: 7px;">${selectedCategory.genre}</span>
+</p></strong></center><br>
      
      <table id="productTable">
                      <c:forEach var="product" items="${categoryProducts.rows}" varStatus="iter">

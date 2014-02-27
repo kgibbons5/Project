@@ -24,10 +24,10 @@
             <include-coda>/WEB-INF/jspf/footer.jspf</include-coda>
         </jsp-property-group>
     </jsp-config>
-    <resource-ref>
+<!--    <resource-ref>
         <res-ref-name>jdbc/Project</res-ref-name>
-        <res-type>javax.sql.ConnectionPoolDataSource</res-type> <!--DataSource-->
+        <res-type>javax.sql.ConnectionPoolDataSource</res-type> DataSource
         <res-auth>Container</res-auth>
         <res-sharing-scope>Shareable</res-sharing-scope>
-    </resource-ref>
+    </resource-ref>-->
 </web-app>
