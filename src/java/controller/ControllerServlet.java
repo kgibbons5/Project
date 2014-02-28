@@ -5,14 +5,22 @@
  */
 
 package controller;
-
+import cart.Cart;
+import entity.Category;
+import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collection;
+import javax.ejb.EJB;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import session.CategoryFacade;
+import session.ProductFacade;
 
 /**
  *
@@ -27,6 +35,7 @@ import javax.servlet.http.HttpServletResponse;
                            "/checkout",
                            "/purchase",
                            "/home"
+                           
             
             })
 
@@ -39,11 +48,34 @@ public class ControllerServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    @EJB
+    private CategoryFacade categoryFacade;
+    @EJB
+    private ProductFacade productFacade;
+    
+     @Override
+    public void init(ServletConfig servletConfig) throws ServletException {
+
+        super.init(servletConfig);
+
+        // initialize servlet with configuration information
+        //surcharge = servletConfig.getServletContext().getInitParameter("deliverySurcharge");
+
+        // store category list in servlet context
+        getServletContext().setAttribute("categories", categoryFacade.findAll());
+    }
+    
+    
+    
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 
         String userPath = request.getServletPath();
+         HttpSession session = request.getSession();
+        Category selectedCategory;
+        Collection<Product> categoryProducts;
 
         // if category page is requested
         if (userPath.equals("/category")) {
@@ -51,9 +83,17 @@ public class ControllerServlet extends HttpServlet {
 
         // if cart page is requested
         } else if (userPath.equals("/viewCart")) {
-            // TODO: Implement cart page request
+            String clear = request.getParameter("clear");
+
+            if ((clear != null) && clear.equals("true")) {
+
+                Cart cart = (Cart) session.getAttribute("cart");
+                cart.clear();
+            }
 
             userPath = "/cart";
+
+            
 
         // if checkout page is requested
         } else if (userPath.equals("/checkout")) {
@@ -87,10 +127,28 @@ public class ControllerServlet extends HttpServlet {
     throws ServletException, IOException {
 
         String userPath = request.getServletPath();
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+        
 
         // if addToCart action is called
         if (userPath.equals("/addToCart")) {
-            // TODO: Implement add product to cart action
+            if (cart == null) {
+
+                cart = new Cart();
+                session.setAttribute("cart", cart);
+            }
+          
+            // get user input from request
+            String productId = request.getParameter("productId");
+
+            if (!productId.isEmpty()) {
+
+                Product product = productFacade.find(Integer.parseInt(productId));
+                cart.addItem(product);
+            }
+             userPath = "/home";
+
 
         // if updateCart action is called
         } else if (userPath.equals("/updateCart")) {

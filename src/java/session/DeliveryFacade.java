@@ -6,7 +6,7 @@
 
 package session;
 
-import enterprise.web_jpa_war.entity.Delivery;
+import entity.Delivery;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

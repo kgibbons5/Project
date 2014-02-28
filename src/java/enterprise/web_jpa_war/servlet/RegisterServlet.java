@@ -1,6 +1,6 @@
 package enterprise.web_jpa_war.servlet;
 
-import enterprise.web_jpa_war.entity.Customer;
+import entity.Customer;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;

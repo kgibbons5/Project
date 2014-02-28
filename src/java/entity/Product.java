@@ -1,4 +1,4 @@
-package enterprise.web_jpa_war.entity;
+package entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +27,7 @@ public class Product {
     private String stock;
     
      @Column(name = "pPrice")
-    private String price;
+    private float price;
      
      @Column(name = "image")
     private String img;
@@ -43,7 +43,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(int id, String name, String genre, String stock, String price, String img, String des, int cid) {
+    public Product(int id, String name, String genre, String stock, float price, String img, String des, int cid) {
         this.id = id;
         this.name = name;
         this.genre  = genre;
@@ -69,8 +69,12 @@ public class Product {
      public String getStock() {
         return this.stock;
     }
-    
-      public String getPrice() {
+
+    /**
+     *
+     * @return
+     */
+    public float getPrice() {
         return this.price;
     }
       
@@ -85,4 +89,5 @@ public class Product {
       public int getCid() {
         return this.cid;
     }
+      
 }

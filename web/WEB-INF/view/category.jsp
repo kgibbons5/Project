@@ -107,13 +107,25 @@
             
             <td>
                 <center>
-                <form action="addToCart" method="post">
+<!--                <form action="addToCart" method="post">
                     <input type="hidden"
                            name="productId"
                            value="${product.pID}">
                     <input type="submit"
                            value="Add to Cart">
-                </form>
+                </form>-->
+
+
+<!--netbeans cart code below our previous cart code is above may need to change or 
+modify one if theres a problem-->
+                <form action="<c:url value='addToCart'/>" method="post">
+                        <input type="hidden"
+                               name="productId"
+                               value="${product.pId}">
+                        <input type="submit"
+                               name="submit"
+                               value="Add To Cart">
+                    </form>
                     </center>
             </td>
         </tr>

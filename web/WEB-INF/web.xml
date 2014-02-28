@@ -10,6 +10,10 @@
         <param-name>categoryImagePath</param-name>
         <param-value>Images/category/</param-value>
     </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>resources.messages</param-value>
+    </context-param>
     <session-config>
         <session-timeout>
             30
@@ -26,7 +30,8 @@
     </jsp-config>
     <resource-ref>
         <res-ref-name>jdbc/Project</res-ref-name>
-        <res-type>javax.sql.ConnectionPoolDataSource</res-type> <!--DataSource-->
+        <res-type>javax.sql.ConnectionPoolDataSource</res-type>
+        <!--DataSource-->
         <res-auth>Container</res-auth>
         <res-sharing-scope>Shareable</res-sharing-scope>
     </resource-ref>

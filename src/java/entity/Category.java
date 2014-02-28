@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package enterprise.web_jpa_war.entity;
+package entity;
 
 import java.io.Serializable;
 import java.util.Collection;

@@ -6,7 +6,7 @@
 
 package session;
 
-import enterprise.web_jpa_war.entity.Category;
+import entity.Category;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,7 +16,9 @@ import javax.persistence.PersistenceContext;
  * @author Katie
  */
 @Stateless
-public class CategoryFacade extends AbstractFacade<Category> {
+public class CategoryFacade extends AbstractFacade<Category> 
+{
+    
     @PersistenceContext(unitName = "web-jpaPU")
     private EntityManager em;
 

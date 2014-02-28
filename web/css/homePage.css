@@ -20,6 +20,13 @@ height: 110px;
 margin: 10px 0px 5px 0px;
 background:#87AFC7;
 }
+.headerWidget {
+    width: 194px;
+    margin-right:  30px;
+    font-size: small;
+    float: right;
+    
+}
 #navigation {
 float: left;
 width: 900px;
@@ -262,7 +269,17 @@ width: 665px;
 float: right;
 }
 
-#productTable { width: 600px }
+#productTable {
+    width: 600px;
+
+    /* styles to collaborate with rounded categoryLabel */
+    position: relative;
+    z-index: 1;
+}
+
+#productTable tr { height: 90px }
+
+#productTable td { width: 145px }
 
 #imagecolumn
 {
@@ -315,3 +332,50 @@ float: right;
 #productTable td { width: 120px }
 
 
+#cartTable { width: 630px }
+
+#cartTable td {
+    width: 145px;
+    height: 90px;
+}
+#singleColumn {
+    margin: 20px 0px;
+    text-align: left;
+    
+}
+#actionBar {
+    margin: 30px;
+    width: 750px;
+    text-align: center;
+    margin-left:-30px;
+}
+
+.bubble {
+    font-weight: bold;
+    background-color: #f5eabe;
+    padding: 5px;
+    color: inherit;
+    display: inline;
+    border-radius: 4px;
+}
+
+.hMargin { margin: 0 30px }
+
+.smallText { font-size: small }
+
+.reallySmallText { font-size: xx-small }
+
+.header {
+    background-color: #c3e3e0;
+    height: 30px;
+}
+
+.error {
+    color: #c00;
+    font-style: italic;
+}
+
+.tableHeading {
+    font-weight: bold;
+    background-color: #edf8f7;
+}

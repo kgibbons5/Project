@@ -6,7 +6,7 @@
 
 package session;
 
-import enterprise.web_jpa_war.entity.PurchaseOrder;
+import entity.PurchaseOrder;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

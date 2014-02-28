@@ -1,6 +1,6 @@
 package enterprise.web_jpa_war.servlet;
 
-import enterprise.web_jpa_war.entity.Product;
+import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;

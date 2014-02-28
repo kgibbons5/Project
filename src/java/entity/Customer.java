@@ -1,4 +1,4 @@
-package enterprise.web_jpa_war.entity;
+package entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
