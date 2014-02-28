@@ -6,7 +6,11 @@
 </head>
 <body>
 
-<div id="footer"> This is the Footer </div>
+<div id="footer"> 
+    <center><h3><stong>
+        @2014 DVDeals by Póraich Troy, Brian Neary and Katie Gibbons
+   </strong></h3></center>
+</div>
  <!-- End Footer -->
 </div>
 

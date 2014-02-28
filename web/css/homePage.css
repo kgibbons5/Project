@@ -140,8 +140,6 @@ font-weight: bold;
  border-style:double;
  border-width:4px;
  border-color:#FFFFFF;
- 
- 
 }
 .tabs a:hover, .tabs a.active
 {
@@ -157,7 +155,7 @@ font-weight: bold;
 .tabContent{
  
  margin: 1px ;
- padding: 1px;
+ padding: 2px;
  text-decoration: none;
  color:#008000;
  

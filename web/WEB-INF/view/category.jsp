@@ -33,9 +33,7 @@
         <c:choose>
             <c:when test="${category.id == pageContext.request.queryString}">
                 
-                    <span class="tabContent" id="selectedTab">
-                        ${category.genre}
-                    </span>
+                 <a data-toggle=" ${category.id}" href="category?${category.id}">${category.genre}</a>
                 
             </c:when>
             <c:otherwise>
