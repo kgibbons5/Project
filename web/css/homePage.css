@@ -256,7 +256,18 @@ clear:both;
     margin-top: 35px;
     margin-right: 30px;
 }
+#checkoutcol
+{
+    color: #333;
+    border: 1px solid #ccc;
+    background:#87AFC7;
+    margin: 0px 3px 0px 0px;
+    padding: 10px;
+    height: 630px;
+    width: 665px;
+    float: right;
 
+}
 #browsecolumn
 { 
 color: #333;
@@ -343,6 +354,11 @@ float: right;
     text-align: left;
     
 }
+#infoBox 
+{
+    padding: 10px 25px; 
+
+}
 #actionBar {
     margin: 30px;
     width: 750px;
@@ -379,3 +395,66 @@ float: right;
     font-weight: bold;
     background-color: #edf8f7;
 }
+
+#confirmationText {
+    margin: 0 20px 20px;
+    padding: 10px;
+    background-color: #f5eabe;
+    float: left;
+    border-radius: 4px;
+}
+
+.summaryColumn {
+    margin-top: 15px;
+    width: 50%;
+    float: left;
+}
+
+.detailsTable { text-align: left }
+
+.detailsTable th { padding: 5px 10px }
+
+.detailsTable td {
+    padding: 5px 10px 5px 20px;
+    font-size: small;
+    font-family: "Courier New", courier, monospace;
+}
+
+#orderSummaryTable { width: 100% }
+
+#deliveryAddressTable {
+    width: 70%;
+    margin-left: 15%;
+}
+
+#deliveryAddressTable td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.quantityColumn {
+    text-align: center;
+    width: 62px;
+}
+
+.confirmationPriceColumn {
+    width: 90px;
+    font-weight: normal;
+}
+
+#deliverySurchargeCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#deliverySurchargeCellRight { padding: 0 20px }
+
+#totalCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#totalCellRight { padding: 0 20px }
+
+#dateProcessedRow { padding: 2px 0 10px 20px }
+

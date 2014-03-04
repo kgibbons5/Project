@@ -6,7 +6,7 @@
 
 package session;
 
-import entity.Delivery;
+import entity.OrderedProduct;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,7 +16,7 @@ import javax.persistence.PersistenceContext;
  * @author Katie
  */
 @Stateless
-public class DeliveryFacade extends AbstractFacade<Delivery> {
+public class DeliveryFacade extends AbstractFacade<OrderedProduct> {
     @PersistenceContext(unitName = "web-jpaPU")
     private EntityManager em;
 
@@ -26,7 +26,7 @@ public class DeliveryFacade extends AbstractFacade<Delivery> {
     }
 
     public DeliveryFacade() {
-        super(Delivery.class);
+        super(OrderedProduct.class);
     }
     
 }

@@ -153,20 +153,20 @@ public class Cart {
      * the designated surcharge and sets the <code>total</code> instance variable
      * with the result.
      *
+     * @param delCharge
      * @param surcharge the designated surcharge for all orders
      * @see ShoppingCartItem
      */
-    public synchronized void calculateTotal(String surcharge) {
+    public synchronized void calculateTotal(double delCharge) {
 
-        double amount = 0;
+        
 
         // cast surcharge as double
-        double s = Double.parseDouble(surcharge);
+        delCharge=3.99;
+        total= this.getSubtotal();
+        total += delCharge;
 
-        amount = this.getSubtotal();
-        amount += s;
-
-        total = amount;
+        
     }
 
     /**
@@ -177,7 +177,15 @@ public class Cart {
      */
     public synchronized double getTotal() {
 
-        return total;
+        double amount = 0;
+
+        for (CartItem scItem : items) {
+
+            Product product = (Product) scItem.getProduct();
+            amount += (scItem.getQuantity() * product.getPrice());
+        }
+        amount+=3.99;
+        return amount;
     }
 
     /**

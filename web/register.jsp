@@ -18,8 +18,7 @@
             <form id="Register" action="Register" method="post" size="4">
             <table cellspacing="10">
             <tr><td>ID:</td><td><input type="text" id = "id" name="id" /></td></tr>
-            <tr><td>FirstName</td><td><input type="text" id = "firstName" name="firstName" /></td></tr>
-            <tr><td>SurName</td><td><input type="text" id = "surName" name="surName" /></td></tr>
+            <tr><td>Name</td><td><input type="text" id = "name" name="name" /></td></tr>
             <tr><td>Email</td><td><input type="text" id = "email" name="email" /></td></tr>
             <tr><td>Password</td><td><input type="Password" id = "password" name="password" /></td></tr>    
             </table>

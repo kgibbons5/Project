@@ -49,8 +49,7 @@ public class RegisterServlet extends HttpServlet
         {
             //Get the data from user's form
             String id         = (String) request.getParameter("id");
-            String firstName  = (String) request.getParameter("firstName");
-            String surName   = (String) request.getParameter("surName");
+            String name   = (String) request.getParameter("name");
             String email      = (String) request.getParameter("email");
             String password   = (String) request.getParameter("password");
             
@@ -98,16 +97,12 @@ public class RegisterServlet extends HttpServlet
                 errormsg1 ="User ID can't be null or empty";
                 error=true;
             }
-            if(firstName == null || firstName.equals(""))
+            if(name == null || name.equals(""))
             {
-                errormsg2 = "FirstName can't be null or empty";
+                errormsg2 = "Name can't be null or empty";
                 error=true;
             }
-            if(surName == null || surName.equals(""))
-            {
-                errormsg3 ="SurName Email can't be null or empty";
-                error=true;
-            }
+            
             if(email == null || email.equals(""))
             {
                 errormsg4 = "Email can't be null or empty";
@@ -165,7 +160,7 @@ public class RegisterServlet extends HttpServlet
             if((errormsg1 == "")&&(errormsg2 == "")&&(errormsg3 == "")&&(errormsg4 == "")&&(errormsg5 == ""))
             {
                 //Create a person instance out of it
-                Customer customer = new Customer(id, firstName, surName, email,password);
+                Customer customer = new Customer(id, name, email,password);
                 //begin a transaction
                 utx.begin();
                 //create an em. 

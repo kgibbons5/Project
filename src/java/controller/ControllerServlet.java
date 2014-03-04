@@ -3,25 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package controller;
+
+
 import cart.Cart;
 import entity.Category;
 import entity.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Collection;
+import java.util.Locale;
+import java.util.Map;
 import javax.ejb.EJB;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import session.CategoryFacade;
+import session.OrderManager;
+import session.OrderedProductFacade;
 import session.ProductFacade;
-
+//import validate.Validator;
 /**
  *
  * @author Katie
@@ -49,9 +50,11 @@ public class ControllerServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @EJB
-    private CategoryFacade categoryFacade;
+    private OrderedProductFacade categoryFacade;
     @EJB
     private ProductFacade productFacade;
+     @EJB
+    private OrderManager orderManager;
     
      @Override
     public void init(ServletConfig servletConfig) throws ServletException {
@@ -97,7 +100,10 @@ public class ControllerServlet extends HttpServlet {
 
         // if checkout page is requested
         } else if (userPath.equals("/checkout")) {
-            // TODO: Implement checkout page request
+            Cart custCart = (Cart) session.getAttribute("cart");
+
+            // calculate total
+            //custCart.calculateTotal(surcharge);
 
         // if user switches language
         } else if (userPath.equals("/chooseLanguage")) {
@@ -152,15 +158,90 @@ public class ControllerServlet extends HttpServlet {
 
         // if updateCart action is called
         } else if (userPath.equals("/updateCart")) {
-            // TODO: Implement update cart action
+             String productId = request.getParameter("productId");
+            String quantity = request.getParameter("quantity");
+            
+            //should not need as everything will be valid for now
+            //should implement later if get time tostop people putting in ridiculous orders.
+           // boolean invalidEntry = validator.validateQuantity(productId, quantity);
+            Product product = productFacade.find(Integer.parseInt(productId));
+            cart.update(product, quantity);
+            //if (!invalidEntry) {
+
+                
+            //}
+
+            userPath = "/cart";
 
         // if purchase action is called
         } else if (userPath.equals("/purchase")) {
-            // TODO: Implement purchase action
 
-            userPath = "/confirmation";
+           if (cart != null) {
+////
+////                // extract user data from request
+            String user = request.getParameter("id");
+            String address = request.getParameter("address");
+            String phone = request.getParameter("phone");
+            String ccNumber = request.getParameter("creditcard");
+//
+//                // validate user data,can come back to later if need be.
+//                
+//                
+//                
+////                boolean validationErrorFlag = false;
+////                validationErrorFlag = validator.validateForm(fname,lname, email, phone, address,  ccNumber, request);
+////
+////                // if validation error found, return user to checkout
+////                if (validationErrorFlag == true) {
+////                    request.setAttribute("validationErrorFlag", validationErrorFlag);
+////                    userPath = "/checkout";
+////
+////                    // otherwise, save order to database
+////                } else {
+//
+                    
+                  int orderId = orderManager.placeOrder(user,address,phone,ccNumber,cart);
+////
+////                    // if order processed successfully send user to confirmation page
+                   if (orderId != 0) {
+//
+//                        // in case language was set using toggle, get language choice before destroying session
+//                        
+//
+                        cart = null;
+
+                        // end session
+                        session.invalidate();
+//
+//                       
+//
+//                        // get order details
+                        Map orderMap = orderManager.getOrderDetails(orderId);
+
+                        // place order details in request scope
+                     
+                        request.setAttribute("customer", orderMap.get("customer"));
+                        request.setAttribute("products", orderMap.get("products"));
+                        request.setAttribute("orderRecord", orderMap.get("orderRecord"));
+                        request.setAttribute("orderedProducts", orderMap.get("orderedProducts"));
+
+                        userPath = "/confirmation";
+                            // dissociate shopping cart from session
+                      
+
+                    // otherwise, send back to checkout page and display error
+//                    } else {
+//                        userPath = "/checkout";
+//                        request.setAttribute("orderFailureFlag", true);
+//                    }
         }
-
+           }
+            
+        
+                
+            
+        
+        }
         // use RequestDispatcher to forward request internally
         String url = "/WEB-INF/view" + userPath + ".jsp";
 
@@ -169,6 +250,11 @@ public class ControllerServlet extends HttpServlet {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    
     }
-
 }
+
+
+
+
+    

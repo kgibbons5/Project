@@ -6,27 +6,28 @@
 
 package session;
 
-import cart.CartItem;
+import entity.Buyer;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Katie
+ * @author Brian
  */
 @Stateless
-public class CartItemFacade extends AbstractFacade<CartItem> {
+public class BuyerFacade extends AbstractFacade<Buyer> {
     @PersistenceContext(unitName = "web-jpaPU")
     private EntityManager em;
 
     @Override
-    protected EntityManager getEntityManager() {
+    protected EntityManager getEntityManager() 
+    {
         return em;
     }
 
-    public CartItemFacade() {
-        super(CartItem.class);
+    public BuyerFacade() {
+        super(Buyer.class);
     }
     
 }

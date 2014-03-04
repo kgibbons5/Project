@@ -6,7 +6,7 @@
 
 package session;
 
-import entity.PurchaseOrder;
+import entity.CustomerOrder;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,7 +16,7 @@ import javax.persistence.PersistenceContext;
  * @author Katie
  */
 @Stateless
-public class PurchaseOrderFacade extends AbstractFacade<PurchaseOrder> {
+public class CustomerOrderFacade extends AbstractFacade<CustomerOrder> {
     @PersistenceContext(unitName = "web-jpaPU")
     private EntityManager em;
 
@@ -25,8 +25,8 @@ public class PurchaseOrderFacade extends AbstractFacade<PurchaseOrder> {
         return em;
     }
 
-    public PurchaseOrderFacade() {
-        super(PurchaseOrder.class);
+    public CustomerOrderFacade() {
+        super(CustomerOrder.class);
     }
     
 }
