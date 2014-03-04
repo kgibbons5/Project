@@ -22,29 +22,15 @@
     
   <div id="browsecolumn">
     <div id="singleColumn">
-
-    <p id="confirmationText">
-        <strong><fmt:message key="successMessage"/></strong>
+        <center><strong><h4> Thank you for your order! </h4></strong></center><br>
+    
+       
         <br><br>
-        <fmt:message key="confirmationNumberMessage"/>
-        <strong>${orderRecord.confirmationNumber}</strong>
+        <center><strong><h4> Please keep a copy of the confirmation number below: </h4></strong></center><br>
+        <center><strong>${orderRecord.confirmationNumber}</strong></center>
         <br>
-        <fmt:message key="contactMessage"/>
-        <br><br>
-        <fmt:message key="thankYouMessage"/>
-    </p>
-    
-    
-    
-    
-    
+        <br><center><img src="http://www.clker.com/cliparts/G/F/D/c/j/r/correct-md.png" alt="tick" height="50%" width="25%"></center>
 
- 
-
-    <div class="summaryColumn" >
-
-        
-    </div>
 </div>
   </div>
 
