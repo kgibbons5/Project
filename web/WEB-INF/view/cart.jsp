@@ -41,22 +41,17 @@
     
  </div>
  
- <div id="leftcolumn"> 
- <div id="categories">
-     <div id="categories_header">
+<div id="leftcolumn"> 
+ <div id="cat">
+     <div id="cat_header">
        
        <h2>Categories</h2>
      </div>
-     <ul>
-       <li><a href="browse.jsp">Comedy</a></li>
-       <li><a href="browse.jsp">Drama</a></li>
-       <li><a href="browse.jsp">Sci-Fi</a></li>
-       <li><a href="browse.jsp">BoxSets</a></li>
-       <li><a href="browse.jsp">Action</a></li>
-       <li><a href="browse.jsp">Horror</a></li>
-       <li><a href="browse.jsp">Childrens</a></li>
-       <li><a href="browse.jsp">Thriller</a></li>
-       <li class="last"><a href="browse.jsp">Romance</a></li>
+    <ul>
+       <li><a href="http://localhost:8080/Project/home">Home</a></li>
+       <li><a href="http://localhost:8080/Project/about.jsp">About</a></li>
+       
+       <li><a href="http://localhost:8080/Project/contact.jsp">Contact</a></li>
      </ul>
      <div class="clearthis">&nbsp;</div>
    </div>

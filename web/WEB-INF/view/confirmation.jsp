@@ -17,8 +17,22 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <div id="leftcolumn">
-    </div>
+    <div id="leftcolumn"> 
+ <div id="cat">
+     <div id="cat_header">
+       
+       <h2>Menu</h2>
+     </div>
+    <ul>
+       <li><a href="http://localhost:8080/Project/home">Home</a></li>
+       <li><a href="http://localhost:8080/Project/about.jsp">About</a></li>
+       
+       <li><a href="http://localhost:8080/Project/contact.jsp">Contact</a></li>
+     </ul>
+     <div class="clearthis">&nbsp;</div>
+   </div>
+ 
+ </div>
     
   <div id="browsecolumn">
     <div id="singleColumn">

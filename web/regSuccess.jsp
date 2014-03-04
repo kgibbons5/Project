@@ -10,7 +10,7 @@
         
         <center>
             <font size = "4" color="#151B54">     
-            <br><br><img src="http://www.clker.com/cliparts/G/F/D/c/j/r/correct-md.png" alt="tick" height="50%" width="25%">
+            
             <h1>Registration Successful!</h1>
         
             <a href="index.jsp"><strong>Click here to login</strong></a> 

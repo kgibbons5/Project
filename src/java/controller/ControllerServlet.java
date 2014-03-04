@@ -35,7 +35,7 @@ import session.ProductFacade;
                            "/updateCart",
                            "/checkout",
                            "/purchase",
-                           "/home"
+                           "/home",
                            
             
             })
@@ -201,21 +201,20 @@ public class ControllerServlet extends HttpServlet {
 //
                     
                   int orderId = orderManager.placeOrder(user,address,phone,ccNumber,cart);
-////
-////                    // if order processed successfully send user to confirmation page
+                  // if order processed successfully send user to confirmation page
                    if (orderId != 0) {
-//
-//                        // in case language was set using toggle, get language choice before destroying session
-//                        
-//
+
+                        
+                        
+                       // dissociate shopping cart from session
                         cart = null;
 
                         // end session
                         session.invalidate();
-//
-//                       
-//
-//                        // get order details
+
+                       
+
+                        // get order details
                         Map orderMap = orderManager.getOrderDetails(orderId);
 
                         // place order details in request scope
@@ -226,7 +225,7 @@ public class ControllerServlet extends HttpServlet {
                         request.setAttribute("orderedProducts", orderMap.get("orderedProducts"));
 
                         userPath = "/confirmation";
-                            // dissociate shopping cart from session
+                            
                       
 
                     // otherwise, send back to checkout page and display error
